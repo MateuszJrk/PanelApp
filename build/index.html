@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <title>AppStack React - Admin &amp; Dashboard Template</title>
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="/css/corporate.css" rel="stylesheet" />
+    <style>
+      body {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      !(function(f) {
+        function e(e) {
+          for (
+            var r, t, n = e[0], o = e[1], a = e[2], c = 0, u = [];
+            c < n.length;
+            c++
+          )
+            (t = n[c]), l[t] && u.push(l[t][0]), (l[t] = 0);
+          for (r in o)
+            Object.prototype.hasOwnProperty.call(o, r) && (f[r] = o[r]);
+          for (s && s(e); u.length; ) u.shift()();
+          return d.push.apply(d, a || []), i();
+        }
+        function i() {
+          for (var e, r = 0; r < d.length; r++) {
+            for (var t = d[r], n = !0, o = 1; o < t.length; o++) {
+              var a = t[o];
+              0 !== l[a] && (n = !1);
+            }
+            n && (d.splice(r--, 1), (e = p((p.s = t[0]))));
+          }
+          return e;
+        }
+        var t = {},
+          l = { 6: 0 },
+          d = [];
+        function p(e) {
+          if (t[e]) return t[e].exports;
+          var r = (t[e] = { i: e, l: !1, exports: {} });
+          return f[e].call(r.exports, r, r.exports, p), (r.l = !0), r.exports;
+        }
+        (p.e = function(a) {
+          var e = [],
+            t = l[a];
+          if (0 !== t)
+            if (t) e.push(t[2]);
+            else {
+              var r = new Promise(function(e, r) {
+                t = l[a] = [e, r];
+              });
+              e.push((t[2] = r));
+              var n,
+                c = document.createElement("script");
+              (c.charset = "utf-8"),
+                (c.timeout = 120),
+                p.nc && c.setAttribute("nonce", p.nc),
+                (c.src =
+                  p.p +
+                  "static/js/" +
+                  ({}[a] || a) +
+                  "." +
+                  {
+                    0: "0eed34a3",
+                    1: "721678a1",
+                    2: "16cc09c9",
+                    3: "c69b0f0a",
+                    4: "afc17b73",
+                    8: "cf3e474a",
+                    9: "83f4336a",
+                    10: "deeedb06",
+                    11: "4f292260",
+                    12: "a5a42846",
+                    13: "7acdf6f7",
+                    14: "3a7bf24e",
+                    15: "e4977c7e",
+                    16: "2a568b98",
+                    17: "8bea0d1b",
+                    18: "1020353e",
+                    19: "b08ebb8a",
+                    20: "30d22351",
+                    21: "12d9c12d",
+                    22: "481700f0",
+                    23: "86e6b35e",
+                    24: "fa945f7e",
+                    25: "9521b615",
+                    26: "d9b7b949",
+                    27: "dec2e51f",
+                    28: "5e0269d1",
+                    29: "59030617",
+                    30: "cb388710",
+                    31: "7d6176ca",
+                    32: "add983fc"
+                  }[a] +
+                  ".chunk.js"),
+                (n = function(e) {
+                  (c.onerror = c.onload = null), clearTimeout(u);
+                  var r = l[a];
+                  if (0 !== r) {
+                    if (r) {
+                      var t = e && ("load" === e.type ? "missing" : e.type),
+                        n = e && e.target && e.target.src,
+                        o = new Error(
+                          "Loading chunk " +
+                            a +
+                            " failed.\n(" +
+                            t +
+                            ": " +
+                            n +
+                            ")"
+                        );
+                      (o.type = t), (o.request = n), r[1](o);
+                    }
+                    l[a] = void 0;
+                  }
+                });
+              var u = setTimeout(function() {
+                n({ type: "timeout", target: c });
+              }, 12e4);
+              (c.onerror = c.onload = n), document.head.appendChild(c);
+            }
+          return Promise.all(e);
+        }),
+          (p.m = f),
+          (p.c = t),
+          (p.d = function(e, r, t) {
+            p.o(e, r) ||
+              Object.defineProperty(e, r, { enumerable: !0, get: t });
+          }),
+          (p.r = function(e) {
+            "undefined" != typeof Symbol &&
+              Symbol.toStringTag &&
+              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+              Object.defineProperty(e, "__esModule", { value: !0 });
+          }),
+          (p.t = function(r, e) {
+            if ((1 & e && (r = p(r)), 8 & e)) return r;
+            if (4 & e && "object" == typeof r && r && r.__esModule) return r;
+            var t = Object.create(null);
+            if (
+              (p.r(t),
+              Object.defineProperty(t, "default", { enumerable: !0, value: r }),
+              2 & e && "string" != typeof r)
+            )
+              for (var n in r)
+                p.d(
+                  t,
+                  n,
+                  function(e) {
+                    return r[e];
+                  }.bind(null, n)
+                );
+            return t;
+          }),
+          (p.n = function(e) {
+            var r =
+              e && e.__esModule
+                ? function() {
+                    return e.default;
+                  }
+                : function() {
+                    return e;
+                  };
+            return p.d(r, "a", r), r;
+          }),
+          (p.o = function(e, r) {
+            return Object.prototype.hasOwnProperty.call(e, r);
+          }),
+          (p.p = "/"),
+          (p.oe = function(e) {
+            throw (console.error(e), e);
+          });
+        var r = (window.webpackJsonp = window.webpackJsonp || []),
+          n = r.push.bind(r);
+        (r.push = e), (r = r.slice());
+        for (var o = 0; o < r.length; o++) e(r[o]);
+        var s = n;
+        i();
+      })([]);</script
+    ><script src="/static/js/7.8c8f2aee.chunk.js"></script
+    ><script src="/static/js/main.2fc7eebd.chunk.js"></script>
+  </body>
+</html>
