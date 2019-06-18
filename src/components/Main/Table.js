@@ -337,7 +337,7 @@
 
 import React from "react";
 import ReactTooltip from "react-tooltip";
-import { Card, CardBody, CustomInput, Button } from "reactstrap";
+import { CustomInput, Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowDown,
@@ -352,7 +352,7 @@ import {
   faUpload
 } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
-import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
+import { Table, Thead, Tbody, Tr } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyle.css";
 
 const SpanWidth = styled.span`
@@ -368,21 +368,27 @@ const ImgModal = styled.img`
   width: 100%;
   height: 400px;
 `;
+const Ths = styled.th`
+  text-align: center;
+`;
+const Tds = styled.td`
+  text-align: center;
+`;
 
 const PaginationTable = () => {
   return (
-    <Table border="true" striped="true">
+    <Table border="true" className="mt-4">
       <Thead>
         <Tr>
-          <Th>Name</Th>
-          <Th>Date</Th>
-          <Th>Size</Th>
-          <Th>Status</Th>
-          <Th>Result</Th>
-          <Th>Thumbnail</Th>
-          <Th>Preview</Th>
-          <Th>Logs</Th>
-          <Th>
+          <Ths>Name</Ths>
+          <Ths>Date</Ths>
+          <Ths>Size</Ths>
+          <Ths>Status</Ths>
+          <Ths>Result</Ths>
+          <Ths>Thumbnail</Ths>
+          <Ths>Preview</Ths>
+          <Ths>Logs</Ths>
+          <Ths>
             {" "}
             <CustomInput
               type="select"
@@ -395,12 +401,12 @@ const PaginationTable = () => {
               <option>Two</option>
               <option>Three</option>
             </CustomInput>
-          </Th>
+          </Ths>
         </Tr>
       </Thead>
       <Tbody>
         <Tr>
-          <Td>
+          <Tds>
             {" "}
             <div>
               <small>
@@ -413,11 +419,11 @@ const PaginationTable = () => {
                 </p>
               </small>
             </div>
-          </Td>
+          </Tds>
 
-          <Td>2011/04/25</Td>
-          <Td>0 MB</Td>
-          <Td>
+          <Tds>2011/04/25</Tds>
+          <Tds>0 MB</Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -480,8 +486,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -492,8 +498,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             {" "}
             <ul className="list-inline d-flex justify-content-around m-0 p-0s">
               <li>
@@ -527,8 +533,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0 p-0s">
               <li>
                 <Button
@@ -541,8 +547,8 @@ const PaginationTable = () => {
                 </Button>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -556,8 +562,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -581,10 +587,10 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
+          </Tds>
         </Tr>
         <Tr>
-          <Td>
+          <Tds>
             {" "}
             <div>
               <small>
@@ -597,11 +603,11 @@ const PaginationTable = () => {
                 </p>
               </small>
             </div>
-          </Td>
+          </Tds>
 
-          <Td>2011/04/25</Td>
-          <Td>0 MB</Td>
-          <Td>
+          <Tds>2011/04/25</Tds>
+          <Tds>0 MB</Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -664,8 +670,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -676,8 +682,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             {" "}
             <ul className="list-inline d-flex justify-content-around m-0 p-0s">
               <li>
@@ -711,8 +717,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0 p-0s">
               <li>
                 <Button
@@ -725,8 +731,8 @@ const PaginationTable = () => {
                 </Button>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -740,8 +746,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -765,10 +771,10 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
+          </Tds>
         </Tr>
         <Tr>
-          <Td>
+          <Tds>
             {" "}
             <div>
               <small>
@@ -781,11 +787,11 @@ const PaginationTable = () => {
                 </p>
               </small>
             </div>
-          </Td>
+          </Tds>
 
-          <Td>2011/04/25</Td>
-          <Td>0 MB</Td>
-          <Td>
+          <Tds>2011/04/25</Tds>
+          <Tds>0 MB</Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -848,8 +854,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -860,8 +866,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             {" "}
             <ul className="list-inline d-flex justify-content-around m-0 p-0s">
               <li>
@@ -895,8 +901,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0 p-0s">
               <li>
                 <Button
@@ -909,8 +915,8 @@ const PaginationTable = () => {
                 </Button>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -924,8 +930,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -949,10 +955,10 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
+          </Tds>
         </Tr>
         <Tr>
-          <Td>
+          <Tds>
             {" "}
             <div>
               <small>
@@ -965,11 +971,11 @@ const PaginationTable = () => {
                 </p>
               </small>
             </div>
-          </Td>
+          </Tds>
 
-          <Td>2011/04/25</Td>
-          <Td>0 MB</Td>
-          <Td>
+          <Tds>2011/04/25</Tds>
+          <Tds>0 MB</Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -1032,8 +1038,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -1044,8 +1050,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             {" "}
             <ul className="list-inline d-flex justify-content-around m-0 p-0s">
               <li>
@@ -1079,8 +1085,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0 p-0s">
               <li>
                 <Button
@@ -1093,8 +1099,8 @@ const PaginationTable = () => {
                 </Button>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -1108,8 +1114,8 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
-          <Td>
+          </Tds>
+          <Tds>
             <ul className="list-inline d-flex justify-content-around m-0">
               <li>
                 <div>
@@ -1133,7 +1139,7 @@ const PaginationTable = () => {
                 </div>
               </li>
             </ul>
-          </Td>
+          </Tds>
         </Tr>
       </Tbody>
     </Table>
