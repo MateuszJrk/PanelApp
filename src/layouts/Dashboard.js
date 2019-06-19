@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Content from "../components/Content";
 import Footer from "../components/Footer/Footer";
 import Statistics from "../components/Main/Statistics";
-import Table from "../components/Main/Table";
+import Table from "../components/Main/Table/Table";
 import Filters from "../components/Main/Filters";
 import Settings from "../components/Settings";
 
