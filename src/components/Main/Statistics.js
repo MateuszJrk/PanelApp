@@ -13,9 +13,9 @@ import {
 
 const Statistics = () => (
   <Row className=" mb-5">
-    <Col sm="6" xl>
+    <Col md="6" xl>
       <Card className="flex-fill">
-        <CardBody className="py-2 m-0">
+        <CardBody className="py-4">
           <Media>
             <div className="d-inline-block mt-2 mr-3">
               <FontAwesomeIcon
@@ -24,8 +24,8 @@ const Statistics = () => (
               />
             </div>
             <Media body>
-              <h3 className="mb-0">Download</h3>
-              <div className="mb-0 ">
+              <h3 className="mb-2">Download</h3>
+              <div className="mb-0">
                 <FontAwesomeIcon
                   icon={faCheckCircle}
                   className=" text-success mr-1"
@@ -44,9 +44,9 @@ const Statistics = () => (
         </CardBody>
       </Card>
     </Col>
-    <Col sm="6" xl>
+    <Col md="6" xl>
       <Card className="flex-fill">
-        <CardBody className="py-2 m-0">
+        <CardBody className="py-4">
           <Media>
             <div className="d-inline-block mt-2 mr-3">
               <FontAwesomeIcon
@@ -55,8 +55,8 @@ const Statistics = () => (
               />
             </div>
             <Media body>
-              <h3 className="mb-0 ">Composed</h3>
-              <div className="mb-0 ">
+              <h3 className="mb-2">Composed</h3>
+              <div className="mb-0">
                 <FontAwesomeIcon
                   icon={faCheckCircle}
                   className=" text-success mr-1"
@@ -75,10 +75,9 @@ const Statistics = () => (
         </CardBody>
       </Card>
     </Col>
-
-    <Col sm="6" xl>
+    <Col md="6" xl>
       <Card className="flex-fill">
-        <CardBody className="py-2 m-0">
+        <CardBody className="py-4">
           <Media>
             <div className="d-inline-block mt-2 mr-3">
               <FontAwesomeIcon
@@ -87,8 +86,8 @@ const Statistics = () => (
               />
             </div>
             <Media body>
-              <h3 className="mb-0">Unzipped</h3>
-              <div className="mb-0 ">
+              <h3 className="mb-2">Unzipped</h3>
+              <div className="mb-0">
                 <FontAwesomeIcon
                   icon={faCheckCircle}
                   className=" text-success mr-1"
@@ -107,9 +106,9 @@ const Statistics = () => (
         </CardBody>
       </Card>
     </Col>
-    <Col sm="6" xl>
+    <Col md="6" xl>
       <Card className="flex-fill">
-        <CardBody className="py-2 m-0">
+        <CardBody className="py-4">
           <Media>
             <div className="d-inline-block mt-2 mr-3">
               <FontAwesomeIcon
@@ -118,8 +117,8 @@ const Statistics = () => (
               />
             </div>
             <Media body>
-              <h3 className="mb-0">Uploaded</h3>
-              <div className="mb-0 ">
+              <h3 className="mb-2">Uploaded</h3>
+              <div className="mb-0">
                 <FontAwesomeIcon
                   icon={faCheckCircle}
                   className=" text-success mr-1"
