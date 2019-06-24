@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Table } from "reactstrap";
+import { Container } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowDown,
@@ -14,69 +14,75 @@ import {
   faStopCircle,
   faCube
 } from "@fortawesome/free-solid-svg-icons";
+import { Table, Tbody, Thead, Tr, Th, Td } from "react-super-responsive-table";
 
 const Footer = () => (
   <footer className="footer">
     <Container>
       <small>
-        <Table borderless className="text-muted ">
-          <tbody>
-            <tr>
-              <td className="p-0 m-0">
+        <Table className="text-muted ">
+          <Thead>
+            <Tr>
+              <Th>
                 <FontAwesomeIcon className="mr-1" icon={faPen} />
                 Compose
-              </td>
-              <td className="p-0 m-0">
+              </Th>
+              <Th>
                 <FontAwesomeIcon className="mr-1" icon={faArrowDown} />
                 Download Status
-              </td>
-              <td className="p-0 m-0">
-                <FontAwesomeIcon className="mr-1" icon={faSpinner} />
-                Composing
-              </td>
-              <td className="p-0 m-0">
-                <FontAwesomeIcon className="mr-1" icon={faFolderOpen} />
-                Unzip Status
-              </td>
-            </tr>
-            <tr>
-              <td className="p-0 m-0">
+              </Th>
+
+              <Th>
                 <FontAwesomeIcon className="mr-1" icon={faCube} />
                 Brick Logs
-              </td>
-              <td className="p-0 m-0">
+              </Th>
+              <Th>
                 <FontAwesomeIcon className="mr-1" icon={faUpload} />
                 Upload Status
-              </td>
-              <td className="p-0 m-0">
-                <FontAwesomeIcon className="mr-1" icon={faEye} />
-                Preview
-              </td>
-              <td className="p-0 m-0">
-                <FontAwesomeIcon className="mr-1" icon={faSortAlphaDown} />
-                Compose Logs
-              </td>
-            </tr>
-            <tr>
-              <td className="p-0 m-0">
+              </Th>
+
+              <Th>
                 <FontAwesomeIcon className="mr-1" icon={faShare} />
                 Package in
-              </td>
-              <td className="p-0 m-0">
+              </Th>
+              <Th>
                 <FontAwesomeIcon className="mr-1" icon={faMagic} />
                 Compose status
-              </td>
-              <td className="p-0 m-0">
+              </Th>
+            </Tr>
+          </Thead>
+
+          <Tbody>
+            <Tr>
+              <Td>
+                <FontAwesomeIcon className="mr-1" icon={faSpinner} />
+                Composing
+              </Td>
+              <Td>
+                <FontAwesomeIcon className="mr-1" icon={faFolderOpen} />
+                Unzip Status
+              </Td>
+
+              <Td>
                 <FontAwesomeIcon className="mr-1" icon={faStopCircle} />
                 Error
-              </td>
+              </Td>
 
-              <td className="p-0 m-0">
+              <Td>
                 <FontAwesomeIcon className="mr-1" icon={faPen} />
                 Terminate
-              </td>
-            </tr>
-          </tbody>
+              </Td>
+
+              <Td>
+                <FontAwesomeIcon className="mr-1" icon={faEye} />
+                Preview
+              </Td>
+              <Td>
+                <FontAwesomeIcon className="mr-1" icon={faSortAlphaDown} />
+                Compose Logs
+              </Td>
+            </Tr>
+          </Tbody>
         </Table>
       </small>
     </Container>

@@ -24,7 +24,7 @@ const Statistics = () => (
               />
             </div>
             <Media body>
-              <h3 className="mb-2">Download</h3>
+              <h3 className="mb-2">Downloaded</h3>
               <div className="mb-0">
                 <FontAwesomeIcon
                   icon={faCheckCircle}
