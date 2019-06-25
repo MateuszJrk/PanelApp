@@ -10,7 +10,7 @@ import {
 
 const Filters = () => {
   return (
-    <div className="row justify-content-around text-muted border-0">
+    <div className="row justify-content-around text-muted border-0 mb-5">
       <Card className="m-0 p-0 border-0 bg-light">
         <CardHeader className="border-0 bg-light ">
           <CardTitle className="mb-0 ">
@@ -18,14 +18,14 @@ const Filters = () => {
           </CardTitle>
         </CardHeader>
         <CardBody className="m-0 p-0">
-          <div className="row">
-            <Badge className="mr-1" color="info">
+          <div className="row justify-content-around">
+            <Badge className="mr-1 mt-2" color="primary">
               <span className="nav-link cursor-pointer ">All</span>
             </Badge>
-            <Badge className="mr-1" color="secondary">
+            <Badge className="mr-1 mt-2" color="secondary">
               <span className="nav-link cursor-pointer ">Unprocessed</span>
             </Badge>
-            <Badge className="mr-1" color="info">
+            <Badge className="mr-1 mt-2" color="info">
               <span className="nav-link cursor-pointer ">
                 <FontAwesomeIcon
                   icon={faSpinner}
@@ -34,7 +34,7 @@ const Filters = () => {
                 Composing
               </span>
             </Badge>
-            <Badge className="mr-1" color="success">
+            <Badge className="mr-1 mt-2" color="success">
               <span className="nav-link cursor-pointer ">
                 <FontAwesomeIcon
                   icon={faCheckCircle}
@@ -43,7 +43,7 @@ const Filters = () => {
                 Preview
               </span>
             </Badge>
-            <Badge className="mr-1" color="danger">
+            <Badge className="mr-1 mt-2" color="danger">
               <span className="nav-link cursor-pointer ">
                 <FontAwesomeIcon
                   icon={faStopCircle}
@@ -52,7 +52,7 @@ const Filters = () => {
                 Error
               </span>
             </Badge>
-            <Badge className="mr-1" color="warning">
+            <Badge className="mr-1 mt-2" color="warning">
               <span className="nav-link cursor-pointer ">
                 <FontAwesomeIcon
                   icon={faClock}
@@ -64,8 +64,7 @@ const Filters = () => {
           </div>
         </CardBody>
       </Card>
-
-      <Card className="m-0 p-0 border-0 bg-light ">
+      {/* <Card className="m-0 p-0 border-0 bg-light ">
         <CardHeader className="border-0 bg-light">
           <CardTitle className="mb-0 ">
             <p className="m-0 text-center">between:</p>
@@ -86,7 +85,7 @@ const Filters = () => {
             placeholder="dd/mm/yyyy"
           />
         </CardBody>
-      </Card>
+      </Card> */}
     </div>
   );
 };

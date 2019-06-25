@@ -1,4 +1,4 @@
-import { Folder, Home } from "react-feather";
+import { Calendar, Folder, Home } from "react-feather";
 
 // import Boxed from "../pages/layouts/Boxed";
 // import SidebarCollapsed from "../pages/layouts/SidebarCollapsed";
@@ -42,6 +42,19 @@ const pageRoutes = {
   ]
 };
 
+const calendarRoute = {
+  path: "/calendar",
+  name: "Date Picker",
+  icon: Calendar,
+  children: [
+    {
+      path: "/calendar",
+      name: "",
+      component: Calendar
+    }
+  ]
+};
+
 // const layoutRoutes = {
 //   path: "/layouts",
 //   name: "Theme Settings",
@@ -81,9 +94,9 @@ const pageRoutes = {
 // };
 
 // Dashboard specific routes
-export const dashboard = [dashboardRoutes, pageRoutes];
+export const dashboard = [dashboardRoutes, pageRoutes, calendarRoute];
 
 // Landing specific routes
 
 // All routes
-export default [dashboardRoutes, pageRoutes];
+export default [dashboardRoutes, pageRoutes, calendarRoute];
