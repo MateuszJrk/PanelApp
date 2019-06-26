@@ -19,13 +19,13 @@ const Filters = () => {
         </CardHeader>
         <CardBody className="m-0 p-0">
           <div className="row justify-content-around">
-            <Badge className="mr-1 mt-2" color="primary">
+            <Badge className="mr-4 mt-2">
               <span className="nav-link cursor-pointer ">All</span>
             </Badge>
-            <Badge className="mr-1 mt-2" color="secondary">
+            <Badge className="mr-4 mt-2" color="secondary">
               <span className="nav-link cursor-pointer ">Unprocessed</span>
             </Badge>
-            <Badge className="mr-1 mt-2" color="info">
+            <Badge className="mr-4 mt-2 bg-light">
               <span className="nav-link cursor-pointer ">
                 <FontAwesomeIcon
                   icon={faSpinner}
@@ -34,7 +34,7 @@ const Filters = () => {
                 Composing
               </span>
             </Badge>
-            <Badge className="mr-1 mt-2" color="success">
+            <Badge className="mr-4 mt-2" color="success">
               <span className="nav-link cursor-pointer ">
                 <FontAwesomeIcon
                   icon={faCheckCircle}
@@ -43,7 +43,7 @@ const Filters = () => {
                 Preview
               </span>
             </Badge>
-            <Badge className="mr-1 mt-2" color="danger">
+            <Badge className="mr-4 mt-2" color="danger">
               <span className="nav-link cursor-pointer ">
                 <FontAwesomeIcon
                   icon={faStopCircle}
@@ -52,7 +52,7 @@ const Filters = () => {
                 Error
               </span>
             </Badge>
-            <Badge className="mr-1 mt-2" color="warning">
+            <Badge className="mr-4 mt-2" color="warning">
               <span className="nav-link cursor-pointer ">
                 <FontAwesomeIcon
                   icon={faClock}

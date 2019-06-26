@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Div = styled.div`
   float: right;
+  margin-right: 40px;
   @media screen and (max-width: 40em) {
     margin-left: 100px;
   }

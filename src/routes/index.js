@@ -1,5 +1,7 @@
 import { Calendar, Folder, Home } from "react-feather";
-
+import Pagination from "../components/Main/Table/Pagination";
+import React from "react";
+import { CustomInput } from "reactstrap";
 // import Boxed from "../pages/layouts/Boxed";
 // import SidebarCollapsed from "../pages/layouts/SidebarCollapsed";
 // import SidebarSticky from "../pages/layouts/SidebarSticky";
@@ -48,9 +50,21 @@ const calendarRoute = {
   icon: Calendar,
   children: [
     {
-      path: "/calendar",
-      name: "",
-      component: Calendar
+      path: "/Calendar",
+      name: (
+        <CustomInput
+          type="select"
+          id="exampleCustomSelect"
+          name="customSelect "
+          className="text-muted"
+        >
+          <option>...</option>
+          <option>Compose</option>
+          <option>Combine</option>
+          <option>Delete</option>
+        </CustomInput>
+      ),
+      component: Pagination
     }
   ]
 };

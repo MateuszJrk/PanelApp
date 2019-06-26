@@ -25,7 +25,7 @@ class DropdownSelect extends React.Component {
 
   render() {
     return (
-      <Col xs="6" xl className="mb-2">
+      <Col xs="6" xl className="mb-2 ml-2">
         <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
           <DropdownToggle caret>50</DropdownToggle>
           <DropdownMenu>
