@@ -1,7 +1,6 @@
 import React from "react";
 import ReactTooltip from "react-tooltip";
 import {
-  Button,
   Card,
   CardHeader,
   DropdownItem,
@@ -19,17 +18,18 @@ import {
   faCheckCircle,
   faEye,
   faCube,
-  faSpinner,
+  faLongArrowAltUp,
+  faLongArrowAltDown,
   faSortAlphaDown,
-  faStopCircle,
   faPen,
   faLayerGroup,
   faMagic,
-  faUpload,
-  faClock
+  faUpload
 } from "@fortawesome/free-solid-svg-icons";
 import Dropdown from "./Dropdown";
 import Pagination from "./Pagination";
+import Calendar from "./Calendar";
+import Filters from "./Filters";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
@@ -93,27 +93,15 @@ const P = styled.p`
 const PaginationTable = () => {
   return (
     <TableDiv>
+      <Row>
+        <Calendar />
+
+        <Filters />
+      </Row>
+
       <Card className="flex-fill w-100  ">
-        <CardHeader className="text-muted text-center">
-          <Button outline color="secondary" className=" my-2 mx-1 text-muted ">
-            All
-          </Button>
-          <Button outline color="secondary" className=" my-2 mx-1 text-muted">
-            Unprocessed
-          </Button>
-          <Button outline color="secondary" className=" my-2 mx-1 text-muted">
-            <FontAwesomeIcon icon={faSpinner} className="cursor-pointer " />
-          </Button>
-          <Button outline color="secondary" className=" my-2 mx-1 text-muted">
-            <FontAwesomeIcon icon={faCheckCircle} className="cursor-pointer " />
-          </Button>
-          <Button outline color="secondary" className=" my-2 mx-1 text-muted">
-            <FontAwesomeIcon icon={faStopCircle} className="cursor-pointer " />
-          </Button>
-          <Button outline color="secondary" className=" my-2 mx-1 text-muted">
-            <FontAwesomeIcon icon={faClock} className="cursor-pointer " />
-          </Button>
-          <div className="card-actions float-right">
+        <CardHeader className="border-0">
+          <div className="card-actions float-right ">
             <UncontrolledDropdown>
               <DropdownToggle tag="a">
                 <MoreHorizontal />
@@ -131,9 +119,39 @@ const PaginationTable = () => {
           <Thead>
             <Tr className="border-0">
               <Ths>Type</Ths>
-              <Ths>Name</Ths>
-              <Ths>Date</Ths>
-              <Ths>Size</Ths>
+              <Ths>
+                Name{" "}
+                <FontAwesomeIcon
+                  icon={faLongArrowAltUp}
+                  className="  text-muted"
+                />
+                <FontAwesomeIcon
+                  icon={faLongArrowAltDown}
+                  className=" text-muted"
+                />
+              </Ths>
+              <Ths>
+                Date{" "}
+                <FontAwesomeIcon
+                  icon={faLongArrowAltUp}
+                  className="  text-muted"
+                />
+                <FontAwesomeIcon
+                  icon={faLongArrowAltDown}
+                  className=" text-muted"
+                />
+              </Ths>
+              <Ths>
+                Size{" "}
+                <FontAwesomeIcon
+                  icon={faLongArrowAltUp}
+                  className="  text-muted"
+                />
+                <FontAwesomeIcon
+                  icon={faLongArrowAltDown}
+                  className=" text-muted"
+                />
+              </Ths>
               <Ths>Status</Ths>
               <Ths>Result</Ths>
               <Ths>Thumbnail</Ths>
@@ -145,7 +163,7 @@ const PaginationTable = () => {
             <Tr className="py-4">
               <Tds>
                 <h4>
-                  <Badge color="primary" className=" ml-1">
+                  <Badge color="primary" className=" ">
                     2D
                   </Badge>
                 </h4>
@@ -285,7 +303,7 @@ const PaginationTable = () => {
                       id="button-addon2"
                     >
                       <FontAwesomeIcon icon={faEye} />
-                      <span className="ml-1">50</span>
+                      <span className="">50</span>
                     </ButtonTable>
                   </li>
                 </ul>
@@ -325,7 +343,7 @@ const PaginationTable = () => {
             <Tr className="py-4">
               <Tds>
                 <h4>
-                  <Badge color="primary" className=" ml-1">
+                  <Badge color="primary" className=" ">
                     2D
                   </Badge>
                 </h4>
@@ -465,7 +483,7 @@ const PaginationTable = () => {
                       id="button-addon2"
                     >
                       <FontAwesomeIcon icon={faEye} />
-                      <span className="ml-1">50</span>
+                      <span className="">50</span>
                     </ButtonTable>
                   </li>
                 </ul>
@@ -505,8 +523,8 @@ const PaginationTable = () => {
             <Tr className="py-4">
               <Tds>
                 <h4>
-                  <Badge color="primary" className=" ml-1">
-                    2D
+                  <Badge color="warning" className=" ">
+                    360
                   </Badge>
                 </h4>
               </Tds>
@@ -645,7 +663,7 @@ const PaginationTable = () => {
                       id="button-addon2"
                     >
                       <FontAwesomeIcon icon={faEye} />
-                      <span className="ml-1">50</span>
+                      <span className="">50</span>
                     </ButtonTable>
                   </li>
                 </ul>
@@ -685,7 +703,7 @@ const PaginationTable = () => {
             <Tr className="py-4">
               <Tds>
                 <h4>
-                  <Badge color="primary" className=" ml-1">
+                  <Badge color="primary" className=" ">
                     2D
                   </Badge>
                 </h4>
@@ -825,7 +843,7 @@ const PaginationTable = () => {
                       id="button-addon2"
                     >
                       <FontAwesomeIcon icon={faEye} />
-                      <span className="ml-1">50</span>
+                      <span className="">50</span>
                     </ButtonTable>
                   </li>
                 </ul>
@@ -865,8 +883,8 @@ const PaginationTable = () => {
             <Tr className="py-4">
               <Tds>
                 <h4>
-                  <Badge color="primary" className=" ml-1">
-                    2D
+                  <Badge color="warning" className=" ">
+                    360
                   </Badge>
                 </h4>
               </Tds>
@@ -1005,7 +1023,7 @@ const PaginationTable = () => {
                       id="button-addon2"
                     >
                       <FontAwesomeIcon icon={faEye} />
-                      <span className="ml-1">50</span>
+                      <span className="">50</span>
                     </ButtonTable>
                   </li>
                 </ul>

@@ -1,8 +1,5 @@
-import { Calendar, Folder, Home } from "react-feather";
-import Pagination from "../components/Main/Table/Pagination";
-import React from "react";
-import { CustomInput } from "reactstrap";
-// import Boxed from "../pages/layouts/Boxed";
+import { Folder, Home } from "react-feather";
+
 // import SidebarCollapsed from "../pages/layouts/SidebarCollapsed";
 // import SidebarSticky from "../pages/layouts/SidebarSticky";
 // import ThemeClassic from "../pages/layouts/ThemeClassic";
@@ -40,31 +37,6 @@ const pageRoutes = {
     {
       path: "/pages/profile",
       name: "Test"
-    }
-  ]
-};
-
-const calendarRoute = {
-  path: "/calendar",
-  name: "Date Picker",
-  icon: Calendar,
-  children: [
-    {
-      path: "/Calendar",
-      name: (
-        <CustomInput
-          type="select"
-          id="exampleCustomSelect"
-          name="customSelect "
-          className="text-muted"
-        >
-          <option>...</option>
-          <option>Compose</option>
-          <option>Combine</option>
-          <option>Delete</option>
-        </CustomInput>
-      ),
-      component: Pagination
     }
   ]
 };
@@ -108,9 +80,9 @@ const calendarRoute = {
 // };
 
 // Dashboard specific routes
-export const dashboard = [dashboardRoutes, pageRoutes, calendarRoute];
+export const dashboard = [dashboardRoutes, pageRoutes];
 
 // Landing specific routes
 
 // All routes
-export default [dashboardRoutes, pageRoutes, calendarRoute];
+export default [dashboardRoutes, pageRoutes];
