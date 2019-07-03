@@ -58,9 +58,9 @@ const Data = [
   {
     _id: "1",
     type: "360",
-    name: "Cernell_small_new_V5_corona_874599_cam2.zip",
+    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
     date: "2011/04/25",
-    size: "2 MB",
+    size: "7 MB",
     status: (
       <Ul className="m-0">
         <div>
@@ -201,13 +201,9 @@ const Data = [
   {
     _id: "12",
     type: "2D",
-    name: (
-      <small>
-        <p className="p-2 m-0">Cernell_small_new_V5_corona_884599_cam2.zip</p>
-      </small>
-    ),
-    date: "2011/04/25",
-    size: "2 MB",
+    name: "Jernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2010/04/25",
+    size: "3 MB",
     status: (
       <Ul className="m-0">
         <div>
@@ -348,9 +344,9 @@ const Data = [
   {
     _id: "123",
     type: "2D",
-    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
-    date: "2011/04/25",
-    size: "2 MB",
+    name: "Aernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2000/04/25",
+    size: "6 MB",
     status: (
       <Ul className="m-0">
         <div>
@@ -491,9 +487,9 @@ const Data = [
   {
     _id: "1231",
     type: "360",
-    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
-    date: "2011/04/25",
-    size: "2 MB",
+    name: "Vernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2020/04/25",
+    size: "4 MB",
     status: (
       <Ul className="m-0">
         <div>
@@ -634,8 +630,8 @@ const Data = [
   {
     _id: "12314",
     type: "2D",
-    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
-    date: "2011/04/25",
+    name: "Zernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2014/04/25",
     size: "2 MB",
     status: (
       <Ul className="m-0">

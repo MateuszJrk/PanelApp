@@ -24,6 +24,7 @@ import Filters from "./Filters";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
+import _ from "lodash";
 
 const Ths = styled.th`
   text-align: center;
@@ -48,7 +49,8 @@ const Tr = styled.tr`
 
 class PaginationTable extends Component {
   state = {
-    data: []
+    data: [],
+    sortColumn: { path: "title", order: "asc" }
   };
 
   componentDidMount() {
@@ -62,6 +64,46 @@ class PaginationTable extends Component {
     this.setState({
       data: [...newData]
     });
+  };
+
+  handleSort = path => {
+    console.log(this.state.sortColumn.order);
+
+    const sortColumn = { ...this.state.sortColumn };
+
+    if (sortColumn.path === path)
+      sortColumn.order = sortColumn.order === "asc" ? "desc" : "asc";
+    else {
+      sortColumn.path = path;
+      sortColumn.order = "asc";
+    }
+
+    let sort = { ...this.state.data };
+
+    sort = _.orderBy(sort, sortColumn.path, sortColumn.order);
+
+    this.setState({ sortColumn, data: sort });
+  };
+  renderSortIcon = column => {
+    if (this.state.sortColumn.order === "asc")
+      return (
+        <>
+          <FontAwesomeIcon
+            icon={faLongArrowAltUp}
+            className=" text-muted"
+            style={{ opacity: 0.4 }}
+          />
+          <FontAwesomeIcon icon={faLongArrowAltDown} className="  text-muted" />
+        </>
+      );
+    else {
+      return (
+        <>
+          <FontAwesomeIcon icon={faLongArrowAltUp} className=" text-muted" />
+          <FontAwesomeIcon icon={faLongArrowAltDown} className="  text-muted" />
+        </>
+      );
+    }
   };
 
   render() {
@@ -93,18 +135,18 @@ class PaginationTable extends Component {
             <Thead>
               <Tr className="border-0">
                 <Ths>Type</Ths>
-                <Ths>
-                  Name{" "}
-                  <FontAwesomeIcon
-                    icon={faLongArrowAltUp}
-                    className="  text-muted"
-                  />
-                  <FontAwesomeIcon
-                    icon={faLongArrowAltDown}
-                    className=" text-muted"
-                  />
+                <Ths
+                  onClick={() => {
+                    this.handleSort("name");
+                  }}
+                >
+                  Name {this.renderSortIcon()}
                 </Ths>
-                <Ths>
+                <Ths
+                  onClick={() => {
+                    this.handleSort("date");
+                  }}
+                >
                   Date{" "}
                   <FontAwesomeIcon
                     icon={faLongArrowAltUp}
@@ -115,7 +157,11 @@ class PaginationTable extends Component {
                     className=" text-muted"
                   />
                 </Ths>
-                <Ths>
+                <Ths
+                  onClick={() => {
+                    this.handleSort("size");
+                  }}
+                >
                   Size{" "}
                   <FontAwesomeIcon
                     icon={faLongArrowAltUp}
@@ -143,7 +189,11 @@ class PaginationTable extends Component {
                       </Badge>
                     </h4>
                   </Tds>
-                  <Tds className="py-2">{data.name}</Tds>
+                  <Tds className="py-2">
+                    <small>
+                      <p className="p-2 m-0">{data.name}</p>
+                    </small>
+                  </Tds>
 
                   <Tds className="py-2">{data.date}</Tds>
                   <Tds className="py-2">{data.size}</Tds>
