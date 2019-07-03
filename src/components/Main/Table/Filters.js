@@ -14,7 +14,9 @@ import {
   faClock
 } from "@fortawesome/free-solid-svg-icons";
 
-const Filters = () => {
+const Filters = props => {
+  const { onFilterSelect } = props;
+
   return (
     <UncontrolledDropdown className="mt-4 ml-2">
       <DropdownToggle tag="a">
@@ -30,7 +32,7 @@ const Filters = () => {
           />
           Preview
         </DropdownItem>
-        <DropdownItem>
+        <DropdownItem onClick={() => onFilterSelect()}>
           <FontAwesomeIcon
             icon={faSpinner}
             className="cursor-pointer text-info mr-1 "
