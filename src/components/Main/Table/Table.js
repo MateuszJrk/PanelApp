@@ -24,6 +24,7 @@ import Filters from "./Filters";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
+import { paginate } from "../../../services/paginate";
 import _ from "lodash";
 
 const Ths = styled.th`
@@ -50,12 +51,18 @@ const Tr = styled.tr`
 class PaginationTable extends Component {
   state = {
     data: [],
-    sortColumn: { path: "title", order: "asc" }
+    sortColumn: { path: "title", order: "asc" },
+    pageSize: { value: 2 },
+    currentPage: 1
   };
 
   componentDidMount() {
     this.setState({ data: getData() });
   }
+
+  handleFilterSelectAll = () => {
+    this.setState({ data: getData() });
+  };
 
   handleFilterSelect = () => {
     const newData = this.state.data.filter(dat => {
@@ -67,8 +74,6 @@ class PaginationTable extends Component {
   };
 
   handleSort = path => {
-    console.log(this.state.sortColumn.order);
-
     const sortColumn = { ...this.state.sortColumn };
 
     if (sortColumn.path === path)
@@ -84,8 +89,8 @@ class PaginationTable extends Component {
 
     this.setState({ sortColumn, data: sort });
   };
-  renderSortIcon = column => {
-    if (this.state.sortColumn.order === "asc")
+  renderSortIconName = path => {
+    if (this.state.sortColumn.order === "asc" && path === "name")
       return (
         <>
           <FontAwesomeIcon
@@ -100,19 +105,92 @@ class PaginationTable extends Component {
       return (
         <>
           <FontAwesomeIcon icon={faLongArrowAltUp} className=" text-muted" />
-          <FontAwesomeIcon icon={faLongArrowAltDown} className="  text-muted" />
+          <FontAwesomeIcon
+            style={{ opacity: 0.4 }}
+            icon={faLongArrowAltDown}
+            className="  text-muted"
+          />
         </>
       );
     }
   };
+  renderSortIconSize = path => {
+    if (this.state.sortColumn.order === "asc" && path === "size")
+      return (
+        <>
+          <FontAwesomeIcon
+            icon={faLongArrowAltUp}
+            className=" text-muted"
+            style={{ opacity: 0.4 }}
+          />
+          <FontAwesomeIcon icon={faLongArrowAltDown} className="  text-muted" />
+        </>
+      );
+    else {
+      return (
+        <>
+          <FontAwesomeIcon icon={faLongArrowAltUp} className=" text-muted" />
+          <FontAwesomeIcon
+            style={{ opacity: 0.4 }}
+            icon={faLongArrowAltDown}
+            className="  text-muted"
+          />
+        </>
+      );
+    }
+  };
+  renderSortIconDate = path => {
+    if (this.state.sortColumn.order === "asc" && path === "date")
+      return (
+        <>
+          <FontAwesomeIcon
+            icon={faLongArrowAltUp}
+            className=" text-muted"
+            style={{ opacity: 0.4 }}
+          />
+          <FontAwesomeIcon icon={faLongArrowAltDown} className="  text-muted" />
+        </>
+      );
+    else {
+      return (
+        <>
+          <FontAwesomeIcon icon={faLongArrowAltUp} className=" text-muted" />
+          <FontAwesomeIcon
+            style={{ opacity: 0.4 }}
+            icon={faLongArrowAltDown}
+            className="  text-muted"
+          />
+        </>
+      );
+    }
+  };
+  handlePageChange = page => {
+    this.setState({ currentPage: page });
+  };
+
+  handleTest = e => {
+    console.log(e);
+  };
+
+  handleSelect = e => {
+    this.setState({ pageSize: { value: e.target.value } });
+  };
 
   render() {
+    const { length } = this.state.data;
+    const { pageSize, currentPage, data } = this.state;
+
+    const pagination = paginate(data, currentPage, pageSize.value);
+
     return (
       <TableDiv>
         <Row>
           <Calendar />
 
-          <Filters onFilterSelect={this.handleFilterSelect} />
+          <Filters
+            onFilterSelect={this.handleFilterSelect}
+            onFilterSelectAll={this.handleFilterSelectAll}
+          />
         </Row>
 
         <Card className="flex-fill w-100  ">
@@ -140,37 +218,21 @@ class PaginationTable extends Component {
                     this.handleSort("name");
                   }}
                 >
-                  Name {this.renderSortIcon()}
+                  Name {this.renderSortIconName("name")}
                 </Ths>
                 <Ths
                   onClick={() => {
                     this.handleSort("date");
                   }}
                 >
-                  Date{" "}
-                  <FontAwesomeIcon
-                    icon={faLongArrowAltUp}
-                    className="  text-muted"
-                  />
-                  <FontAwesomeIcon
-                    icon={faLongArrowAltDown}
-                    className=" text-muted"
-                  />
+                  Date {this.renderSortIconDate("date")}
                 </Ths>
                 <Ths
                   onClick={() => {
                     this.handleSort("size");
                   }}
                 >
-                  Size{" "}
-                  <FontAwesomeIcon
-                    icon={faLongArrowAltUp}
-                    className="  text-muted"
-                  />
-                  <FontAwesomeIcon
-                    icon={faLongArrowAltDown}
-                    className=" text-muted"
-                  />
+                  Size {this.renderSortIconSize("size")}
                 </Ths>
                 <Ths>Status</Ths>
                 <Ths>Result</Ths>
@@ -180,7 +242,7 @@ class PaginationTable extends Component {
               </Tr>
             </Thead>
             <Tbody>
-              {this.state.data.map(data => (
+              {pagination.map(data => (
                 <Tr key={data._id} className="py-4">
                   <Tds>
                     <h4>
@@ -208,8 +270,16 @@ class PaginationTable extends Component {
             </Tbody>
           </Table>
           <Row className="mt-4">
-            <Dropdown />
-            <Pagination />
+            <Dropdown
+              pageSize={this.state.pageSize}
+              onChange={this.handleSelect}
+            />
+            <Pagination
+              itemsCount={length}
+              pageSize={pageSize}
+              onPageChange={this.handlePageChange}
+              currentPage={currentPage}
+            />
           </Row>
         </Card>
       </TableDiv>

@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Filters = props => {
-  const { onFilterSelect } = props;
+  const { onFilterSelect, onFilterSelectAll } = props;
 
   return (
     <UncontrolledDropdown className="mt-4 ml-2">
@@ -23,7 +23,7 @@ const Filters = props => {
         <span className="text-primary">+ Add filter</span>
       </DropdownToggle>
       <DropdownMenu right>
-        <DropdownItem>All</DropdownItem>
+        <DropdownItem onClick={() => onFilterSelectAll()}>All</DropdownItem>
         <DropdownItem>Unprocessed</DropdownItem>
         <DropdownItem>
           <FontAwesomeIcon
