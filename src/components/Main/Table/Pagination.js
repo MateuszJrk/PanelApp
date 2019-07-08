@@ -13,7 +13,14 @@ const Div = styled.div`
 
 class PaginationMenu extends React.Component {
   render() {
-    const { itemsCount, pageSize, currentPage, onPageChange } = this.props;
+    const {
+      itemsCount,
+      pageSize,
+      currentPage,
+      onPageChange,
+      prevPage,
+      nextPage
+    } = this.props;
     console.log(currentPage);
     const pagesCount = Math.ceil(itemsCount / pageSize.value);
     if (pagesCount <= 1) return null;
@@ -22,8 +29,16 @@ class PaginationMenu extends React.Component {
     return (
       <Div xs="6">
         <Pagination aria-label="Page navigation example">
-          <PaginationItem disabled>
-            <PaginationLink previous href="#" />
+          <PaginationItem
+            className={
+              pages[0] === currentPage ? "page-item disabled" : "page-item"
+            }
+          >
+            <PaginationLink
+              previous
+              href="#"
+              onClick={() => prevPage(currentPage)}
+            />
           </PaginationItem>
           {pages.map(page => (
             <PaginationItem
@@ -38,8 +53,16 @@ class PaginationMenu extends React.Component {
             </PaginationItem>
           ))}
 
-          <PaginationItem>
-            <PaginationLink next href="#" />
+          <PaginationItem
+            className={
+              pages.length === currentPage ? "page-item disabled" : "page-item"
+            }
+          >
+            <PaginationLink
+              next
+              href="#"
+              onClick={() => nextPage(currentPage)}
+            />
           </PaginationItem>
         </Pagination>
       </Div>

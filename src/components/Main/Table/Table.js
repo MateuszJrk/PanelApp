@@ -176,6 +176,13 @@ class PaginationTable extends Component {
     this.setState({ pageSize: { value: e.target.value } });
   };
 
+  handleNextPage = currPage => {
+    this.setState({ currentPage: currPage + 1 });
+  };
+  handlePrevPage = currPage => {
+    this.setState({ currentPage: currPage - 1 });
+  };
+
   render() {
     const { length } = this.state.data;
     const { pageSize, currentPage, data } = this.state;
@@ -275,6 +282,8 @@ class PaginationTable extends Component {
               onChange={this.handleSelect}
             />
             <Pagination
+              nextPage={this.handleNextPage}
+              prevPage={this.handlePrevPage}
               itemsCount={length}
               pageSize={pageSize}
               onPageChange={this.handlePageChange}
