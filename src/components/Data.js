@@ -769,6 +769,4296 @@ const Data = [
       </Ul>
     ),
     isFiltered: false
+  },
+  {
+    _id: "111",
+    type: "360",
+    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2011/04/25",
+    size: "7 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "1212",
+    type: "2D",
+    name: "Jernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2010/04/25",
+    size: "3 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "123123",
+    type: "2D",
+    name: "Aernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2000/04/25",
+    size: "6 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "12311231",
+    type: "360",
+    name: "Vernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2020/04/25",
+    size: "4 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "12314123123",
+    type: "2D",
+    name: "Zernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2014/04/25",
+    size: "2 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "1123123",
+    type: "360",
+    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2011/04/25",
+    size: "7 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "121231434",
+    type: "2D",
+    name: "Jernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2010/04/25",
+    size: "3 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "123124453",
+    type: "2D",
+    name: "Aernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2000/04/25",
+    size: "6 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "12314634",
+    type: "360",
+    name: "ioernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2020/04/25",
+    size: "4 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "12314756",
+    type: "2D",
+    name: "uernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2014/04/25",
+    size: "2 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "109900",
+    type: "360",
+    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2011/04/25",
+    size: "7 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "1209",
+    type: "2D",
+    name: "Jernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2010/04/25",
+    size: "3 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "12309",
+    type: "2D",
+    name: "Aernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2000/04/25",
+    size: "6 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "123187",
+    type: "360",
+    name: "Vernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2020/04/25",
+    size: "4 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "1231476",
+    type: "2D",
+    name: "Zernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2014/04/25",
+    size: "2 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "1568",
+    type: "360",
+    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2011/04/25",
+    size: "7 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "1278467",
+    type: "2D",
+    name: "Jernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2010/04/25",
+    size: "3 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "12346478",
+    type: "2D",
+    name: "Aernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2000/04/25",
+    size: "6 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "1231135",
+    type: "360",
+    name: "Vernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2020/04/25",
+    size: "4 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "1231445645",
+    type: "2D",
+    name: "Zernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2014/04/25",
+    size: "2 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "1346477",
+    type: "360",
+    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2011/04/25",
+    size: "7 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "12235",
+    type: "2D",
+    name: "Jernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2010/04/25",
+    size: "3 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "1235679",
+    type: "2D",
+    name: "Aernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2000/04/25",
+    size: "6 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "12312357",
+    type: "360",
+    name: "Vernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2020/04/25",
+    size: "4 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "1231407896",
+    type: "2D",
+    name: "Zernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2014/04/25",
+    size: "2 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "16787648",
+    type: "360",
+    name: "Cernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2011/04/25",
+    size: "7 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "125686056",
+    type: "2D",
+    name: "Jernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2010/04/25",
+    size: "3 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "1238098906",
+    type: "2D",
+    name: "Aernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2000/04/25",
+    size: "6 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: true
+  },
+  {
+    _id: "1231566589",
+    type: "360",
+    name: "Vernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2020/04/25",
+    size: "4 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
+  },
+  {
+    _id: "123140785",
+    type: "2D",
+    name: "Zernell_small_new_V5_corona_884599_cam2.zip",
+    date: "2014/04/25",
+    size: "2 MB",
+    status: (
+      <Ul className="m-0">
+        <div>
+          <P data-tip data-for="download">
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="download" aria-haspopup="true" role="tooltip">
+            <p>Initiated: 20 May, 20:50:07</p>
+            <small>
+              <p>Download time: 00:01:57</p>
+            </small>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="unzip">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="unzip" aria-haspopup="true" role="tooltip">
+            <p>Unzip Time: 00:00:10</p>
+          </ReactTooltip>
+        </div>
+
+        <div>
+          <P data-tip data-for="compose">
+            <FontAwesomeIcon
+              icon={faMagic}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="compose" aria-haspopup="true" role="tooltip">
+            <p>Compose Time: 00:00:00</p>
+          </ReactTooltip>
+        </div>
+        <div>
+          <P data-tip data-for="upload">
+            <FontAwesomeIcon
+              icon={faUpload}
+              className="cursor-pointer text-success"
+            />
+          </P>
+          <ReactTooltip id="upload" aria-haspopup="true" role="tooltip">
+            <p>Upload Time: 00:00:01</p>
+          </ReactTooltip>
+        </div>
+      </Ul>
+    ),
+    result: (
+      <ul className="list-inline d-flex justify-content-around m-0">
+        <li>
+          <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
+          </div>
+        </li>
+      </ul>
+    ),
+    thumbnail: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ImgTable
+            src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+            alt="room"
+            type="button"
+            className="cursor-pointer"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <ImgModal
+                  src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
+                  alt="room"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    ),
+    preview: (
+      <ul className="list-inline d-flex justify-content-around m-0 p-0s">
+        <li>
+          <ButtonTable
+            className="btn py-0 px-1 "
+            type="button"
+            id="button-addon2"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            <span className="">50</span>
+          </ButtonTable>
+        </li>
+      </ul>
+    ),
+    logs: (
+      <Ul className=" m-0">
+        <ButtonTable>
+          <FontAwesomeIcon icon={faSortAlphaDown} className="cursor-pointer" />
+        </ButtonTable>
+        <ButtonTable>
+          <FontAwesomeIcon icon={faCube} className="cursor-pointer" />
+        </ButtonTable>
+      </Ul>
+    ),
+    action: (
+      <Ul className=" m-0 pt-1">
+        <div>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faLayerGroup} />
+          </ButtonTable>
+        </div>
+        <div>
+          <ButtonTable>
+            <FontAwesomeIcon icon={faPen} />
+          </ButtonTable>
+        </div>
+      </Ul>
+    ),
+    isFiltered: false
   }
 ];
 

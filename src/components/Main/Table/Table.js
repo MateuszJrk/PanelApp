@@ -17,14 +17,12 @@ import {
   faLongArrowAltUp,
   faLongArrowAltDown
 } from "@fortawesome/free-solid-svg-icons";
-import Dropdown from "./Dropdown";
-import Pagination from "./Pagination";
+import Pagination from "../Pagination/Pagination";
 import Calendar from "./Calendar";
 import Filters from "./Filters";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
-import { paginate } from "../../../services/paginate";
 import _ from "lodash";
 
 const Ths = styled.th`
@@ -52,8 +50,9 @@ class PaginationTable extends Component {
   state = {
     data: [],
     sortColumn: { path: "title", order: "asc" },
-    pageSize: { value: 2 },
-    currentPage: 1
+    currentPage: 1,
+
+    pageOfItems: []
   };
 
   componentDidMount() {
@@ -168,27 +167,18 @@ class PaginationTable extends Component {
     this.setState({ currentPage: page });
   };
 
-  handleTest = e => {
-    console.log(e);
-  };
-
-  handleSelect = e => {
-    this.setState({ pageSize: { value: e.target.value } });
-  };
-
   handleNextPage = currPage => {
     this.setState({ currentPage: currPage + 1 });
   };
   handlePrevPage = currPage => {
     this.setState({ currentPage: currPage - 1 });
   };
+  onChangePage = pageOfItems => {
+    //   update state with new page of items
+    this.setState({ pageOfItems });
+  };
 
   render() {
-    const { length } = this.state.data;
-    const { pageSize, currentPage, data } = this.state;
-
-    const pagination = paginate(data, currentPage, pageSize.value);
-
     return (
       <TableDiv>
         <Row>
@@ -249,7 +239,7 @@ class PaginationTable extends Component {
               </Tr>
             </Thead>
             <Tbody>
-              {pagination.map(data => (
+              {this.state.pageOfItems.map(data => (
                 <Tr key={data._id} className="py-4">
                   <Tds>
                     <h4>
@@ -276,20 +266,10 @@ class PaginationTable extends Component {
               ))}
             </Tbody>
           </Table>
-          <Row className="mt-4">
-            <Dropdown
-              pageSize={this.state.pageSize}
-              onChange={this.handleSelect}
-            />
-            <Pagination
-              nextPage={this.handleNextPage}
-              prevPage={this.handlePrevPage}
-              itemsCount={length}
-              pageSize={pageSize}
-              onPageChange={this.handlePageChange}
-              currentPage={currentPage}
-            />
-          </Row>
+          <Pagination
+            items={this.state.data}
+            onChangePage={this.onChangePage}
+          />
         </Card>
       </TableDiv>
     );

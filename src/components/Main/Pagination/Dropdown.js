@@ -29,14 +29,15 @@ const Option = styled.option`
 `;
 
 const DropdownSelect = props => {
-  const { onChange, pageSize } = props;
+  const { handleSelect, pageSize } = props;
+
   return (
     <Col xs="6" xl className="mb-2 ml-2">
-      <Select value={pageSize.value} onChange={e => onChange(e)}>
-        <Option value="2">2</Option>
-        <Option value="3">3</Option>
+      <Select value={pageSize} onChange={e => handleSelect(e)}>
         <Option value="4">4</Option>
-        <Option value="5">5</Option>
+        <Option value="20">20</Option>
+        <Option value="30">30</Option>
+        <Option value="40">40</Option>
       </Select>
     </Col>
   );
