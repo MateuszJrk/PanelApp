@@ -13,7 +13,6 @@ const Select = styled.select`
   height: 33px;
   transition: 0.5s all ease-out;
   position: center;
-
   &:hover {
     background-color: #000000;
     color: white;
@@ -29,12 +28,12 @@ const Option = styled.option`
 `;
 
 const DropdownSelect = props => {
-  const { handleSelect, pageSize } = props;
+  const { onChange, pageSize } = props;
 
   return (
     <Col xs="6" xl className="mb-2 ml-2">
-      <Select value={pageSize} onChange={e => handleSelect(e)}>
-        <Option value="4">4</Option>
+      <Select value={pageSize.value} onChange={e => onChange(e)}>
+        <Option value="6">6</Option>
         <Option value="20">20</Option>
         <Option value="30">30</Option>
         <Option value="40">40</Option>

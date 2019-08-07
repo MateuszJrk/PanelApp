@@ -19,7 +19,6 @@ const Dashboard = () => (
         <Navbar />
         <Content>
           <Statistics />
-
           <Table />
         </Content>
         <Footer />

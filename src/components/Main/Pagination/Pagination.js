@@ -1,9 +1,7 @@
-/* Pagination Component 
--------------------------------------------------*/
 import React from "react";
 import styled from "styled-components";
-import { Row, PaginationItem, PaginationLink } from "reactstrap";
-import Dropdown from "./Dropdown";
+import { PaginationItem, PaginationLink } from "reactstrap";
+
 // const propTypes = {
 //     items: React.PropTypes.array.isRequired,
 //   onChangePage: React.PropTypes.func.isRequired,
@@ -15,7 +13,7 @@ import Dropdown from "./Dropdown";
 // };
 
 export default class PaginationMenu extends React.Component {
-  state = { pager: {}, pageSize: { value: 4 } };
+  state = { pager: {} };
 
   componentWillMount() {
     // set page if items array isn't empty
@@ -49,7 +47,7 @@ export default class PaginationMenu extends React.Component {
     console.log(pageOfItems);
 
     // update state
-    this.setState({ pager: pager });
+    this.setState({ pager });
 
     // call change page function in parent component
     this.props.onChangePage(pageOfItems);
@@ -60,7 +58,7 @@ export default class PaginationMenu extends React.Component {
     currentPage = currentPage || 1;
 
     // default page size
-    pageSize = this.state.pageSize.value;
+    pageSize = parseInt(this.props.pageSize.value);
     console.log(pageSize);
 
     // calculate total pages
@@ -109,11 +107,6 @@ export default class PaginationMenu extends React.Component {
     };
   };
 
-  handleSelect = e => {
-    console.log(e);
-    this.setState({ pageSize: { value: e.target.value } });
-  };
-
   render() {
     const pager = this.state.pager;
 
@@ -130,53 +123,45 @@ export default class PaginationMenu extends React.Component {
     }
 
     return (
-      <Row className="mt-4 ">
-        <Dropdown
-          pageSize={this.state.pageSize}
-          handleSelect={this.handleSelect}
-        />
-        <Pag
-          aria-label="Page navigation example"
-          className="list-inline d-flex justify-content-around"
+      <Pag
+        aria-label="Page navigation example"
+        className="list-inline d-flex justify-content-around"
+      >
+        <PaginationItem className={pager.currentPage === 1 ? "disabled" : ""}>
+          <PaginationLink onClick={() => this.setPage(1)}>First</PaginationLink>
+        </PaginationItem>
+        <PaginationItem className={pager.currentPage === 1 ? "disabled" : ""}>
+          <PaginationLink
+            previous
+            onClick={() => this.setPage(pager.currentPage - 1)}
+          />
+        </PaginationItem>
+        {pager.pages.map((page, index) => (
+          <PaginationItem
+            key={index}
+            className={pager.currentPage === page ? "active" : ""}
+          >
+            <PaginationLink onClick={() => this.setPage(page)}>
+              {page}
+            </PaginationLink>
+          </PaginationItem>
+        ))}
+        <PaginationItem
+          className={pager.currentPage === pager.totalPages ? "disabled" : ""}
         >
-          <PaginationItem className={pager.currentPage === 1 ? "disabled" : ""}>
-            <PaginationLink onClick={() => this.setPage(1)}>
-              First
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem className={pager.currentPage === 1 ? "disabled" : ""}>
-            <PaginationLink
-              previous
-              onClick={() => this.setPage(pager.currentPage - 1)}
-            />
-          </PaginationItem>
-          {pager.pages.map((page, index) => (
-            <PaginationItem
-              key={index}
-              className={pager.currentPage === page ? "active" : ""}
-            >
-              <PaginationLink onClick={() => this.setPage(page)}>
-                {page}
-              </PaginationLink>
-            </PaginationItem>
-          ))}
-          <PaginationItem
-            className={pager.currentPage === pager.totalPages ? "disabled" : ""}
-          >
-            <PaginationLink
-              next
-              onClick={() => this.setPage(pager.currentPage + 1)}
-            />
-          </PaginationItem>
-          <PaginationItem
-            className={pager.currentPage === pager.totalPages ? "disabled" : ""}
-          >
-            <PaginationLink onClick={() => this.setPage(pager.totalPages)}>
-              Last
-            </PaginationLink>
-          </PaginationItem>
-        </Pag>
-      </Row>
+          <PaginationLink
+            next
+            onClick={() => this.setPage(pager.currentPage + 1)}
+          />
+        </PaginationItem>
+        <PaginationItem
+          className={pager.currentPage === pager.totalPages ? "disabled" : ""}
+        >
+          <PaginationLink onClick={() => this.setPage(pager.totalPages)}>
+            Last
+          </PaginationLink>
+        </PaginationItem>
+      </Pag>
     );
   }
 }

@@ -20,7 +20,7 @@ import { PieChart, Settings, User } from "react-feather";
 import ServerStatus from "./ServerStatus";
 import avatar1 from "../../assets/img/avatars/avatar.jpg";
 
-const NavbarComponent = ({ dispatch }) => {
+const NavbarComponent = ({ dispatch, value, onChange }) => {
   return (
     <>
       <Navbar color="white" light expand className="border-0">
@@ -39,6 +39,8 @@ const NavbarComponent = ({ dispatch }) => {
             placeholder="Search ..."
             aria-label="Search"
             className="form-control-no-border mr-sm-2"
+            value={value}
+            onChange={e => onChange(e.currentTarget.value)}
           />
         </Form>
 

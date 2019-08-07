@@ -20,6 +20,7 @@ import {
 import Pagination from "../Pagination/Pagination";
 import Calendar from "./Calendar";
 import Filters from "./Filters";
+import Dropdown from "./Dropdown";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
@@ -30,7 +31,6 @@ const Ths = styled.th`
 `;
 const Tds = styled.td`
   text-align: center;
-
   @media screen and (max-width: 40em) {
     border-bottom: 1px solid #d5d9e0;
   }
@@ -51,8 +51,9 @@ class PaginationTable extends Component {
     data: [],
     sortColumn: { path: "title", order: "asc" },
     currentPage: 1,
-
-    pageOfItems: []
+    pageSize: { value: 6 },
+    pageOfItems: [],
+    search: ""
   };
 
   componentDidMount() {
@@ -61,6 +62,10 @@ class PaginationTable extends Component {
 
   handleFilterSelectAll = () => {
     this.setState({ data: getData() });
+  };
+
+  handleSearch = query => {
+    this.setState({ search: query, selectedGenre: null, currentPage: 1 });
   };
 
   handleFilterSelect = () => {
@@ -178,6 +183,12 @@ class PaginationTable extends Component {
     this.setState({ pageOfItems });
   };
 
+  handleSelect = e => {
+    console.log(e);
+    this.setState({ pageSize: { value: e.target.value } });
+    console.log(this.state.pageSize.value);
+  };
+
   render() {
     return (
       <TableDiv>
@@ -266,10 +277,17 @@ class PaginationTable extends Component {
               ))}
             </Tbody>
           </Table>
-          <Pagination
-            items={this.state.data}
-            onChangePage={this.onChangePage}
-          />
+          <Row className="mt-4 ">
+            <Dropdown
+              pageSize={this.state.pageSize}
+              onChange={this.handleSelect}
+            />
+            <Pagination
+              items={this.state.data}
+              onChangePage={this.onChangePage}
+              pageSize={this.state.pageSize}
+            />
+          </Row>
         </Card>
       </TableDiv>
     );
