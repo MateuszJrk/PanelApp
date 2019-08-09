@@ -31,7 +31,7 @@ export default class PaginationMenu extends React.Component {
 
   setPage(page) {
     const items = this.props.items;
-
+    console.log(items)
     let pager = this.state.pager;
 
     if (page < 1 || page > pager.totalPages) {

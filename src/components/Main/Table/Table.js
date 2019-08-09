@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import getData from "../../Data";
+import { connect } from "react-redux";
+import { getDataa } from "../../../redux/actions/dataActions";
 
 import {
   Card,
@@ -57,11 +59,20 @@ class PaginationTable extends Component {
   };
 
   componentDidMount() {
-    this.setState({ data: getData() });
+    // getDataa();
+    // this.setState({ data: getData() });
+    
+     this.props.getDataa()
+    
+    
+    
   }
 
   handleFilterSelectAll = () => {
-    this.setState({ data: getData() });
+    // this.setState({ data: getData() });
+     this.props.getDataa()
+     console.log(this.props.getData);
+    
   };
 
   handleSearch = query => {
@@ -293,4 +304,74 @@ class PaginationTable extends Component {
     );
   }
 }
-export default PaginationTable;
+// export default PaginationTable;
+
+// const mapStateToProps = state => {
+//   return {
+
+//       ctr: state.ctr.counter,
+//       storedResults: state.res.results
+//   }
+// };
+
+// const mapDispatchToProps = dispatch => {
+//   return {
+//       onIncrementCounter: () => dispatch(actionCreators.increment()),
+//       onDecrementCounter: () => dispatch(actionCreators.decrement()),
+//       onAddCounter: () => dispatch(actionCreators.add(10)),
+//       onSubtractCounter: () => dispatch(actionCreators.subtract(15)),
+//       onStoreResult: (result) => dispatch(actionCreators.storeResult(result)),
+//       onDeleteResult: (id) => dispatch(actionCreators.deleteResult(id))
+//   }
+// };
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+
+const mapStateToProps = state => {
+  console.log(state.getData.data)
+  return { getData: state.getData.data };
+};
+
+export default connect( mapStateToProps, {getDataa})(PaginationTable);
+
+// import React, { Component } from "react";
+// import { connect } from "react-redux";
+// import { fetchPosts } from "../actions";
+// import UserHeader from "./UserHeader";
+
+// class PostList extends Component {
+//   componentDidMount() {
+//     this.props.fetchPosts();
+//   }
+
+//   renderList() {
+//     return this.props.post.map(post => {
+//       return (
+//         <div key={post.id}>
+//           <h2>{post.title}</h2>
+//           <div>
+//             <UserHeader userId={post.userId} />
+//           </div>
+//           <p>{post.body}</p>
+//         </div>
+//       );
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <ul>
+//         <li>{this.renderList()}</li>
+//       </ul>
+//     );
+//   }
+// }
+
+// const mapStateToProps = state => {
+//   return { post: state.post };
+// };
+
+// export default connect(
+//   mapStateToProps,
+//   { fetchPosts }
+// )(PostList);
