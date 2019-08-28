@@ -18,6 +18,7 @@ export default class PaginationMenu extends React.Component {
   componentWillMount() {
     // set page if items array isn't empty
     if (this.props.items && this.props.items.length) {
+      console.log(this.props.items);
       this.setPage(this.props.initialPage);
     }
   }
@@ -31,7 +32,7 @@ export default class PaginationMenu extends React.Component {
 
   setPage(page) {
     const items = this.props.items;
-    console.log(items)
+
     let pager = this.state.pager;
 
     if (page < 1 || page > pager.totalPages) {
@@ -40,11 +41,9 @@ export default class PaginationMenu extends React.Component {
 
     // get new pager object for specified page
     pager = this.getPager(items.length, page);
-    console.log(pager);
 
     // get new page of items from items array
     const pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
-    console.log(pageOfItems);
 
     // update state
     this.setState({ pager });
@@ -59,11 +58,9 @@ export default class PaginationMenu extends React.Component {
 
     // default page size
     pageSize = parseInt(this.props.pageSize.value);
-    console.log(pageSize);
 
     // calculate total pages
     const totalPages = Math.ceil(totalItems / pageSize);
-    console.log(totalPages);
 
     let startPage, endPage;
     if (totalPages <= 5) {

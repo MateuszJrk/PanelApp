@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import getData from "../../Data";
+
 import { connect } from "react-redux";
-import { getDataa } from "../../../redux/actions/dataActions";
+import { fetchData } from "../../../redux/actions/dataActions";
 
 import {
   Card,
@@ -59,20 +59,19 @@ class PaginationTable extends Component {
   };
 
   componentDidMount() {
-    // getDataa();
-    // this.setState({ data: getData() });
-    
-     this.props.getDataa()
-    
-    
-    
+    const test = this.props.fetchData();
+
+    console.log(test);
   }
 
   handleFilterSelectAll = () => {
-    // this.setState({ data: getData() });
-     this.props.getDataa()
-     console.log(this.props.getData);
-    
+    console.log(this.props.getData);
+    return this.props.getData;
+
+    // const test = this.props.fetchData();
+    // console.log(test);
+    // const data = getData();
+    // this.setState({ data });
   };
 
   handleSearch = query => {
@@ -80,9 +79,10 @@ class PaginationTable extends Component {
   };
 
   handleFilterSelect = () => {
-    const newData = this.state.data.filter(dat => {
+    const newData = this.props.getData.filter(dat => {
       return dat.isFiltered ? dat : null;
     });
+    console.log(newData);
     this.setState({
       data: [...newData]
     });
@@ -98,7 +98,7 @@ class PaginationTable extends Component {
       sortColumn.order = "asc";
     }
 
-    let sort = { ...this.state.data };
+    let sort = { ...this.props.getData };
 
     sort = _.orderBy(sort, sortColumn.path, sortColumn.order);
 
@@ -261,7 +261,7 @@ class PaginationTable extends Component {
               </Tr>
             </Thead>
             <Tbody>
-              {this.state.pageOfItems.map(data => (
+              {this.props.getData.map(data => (
                 <Tr key={data._id} className="py-4">
                   <Tds>
                     <h4>
@@ -293,85 +293,24 @@ class PaginationTable extends Component {
               pageSize={this.state.pageSize}
               onChange={this.handleSelect}
             />
-            <Pagination
-              items={this.state.data}
+            {/* <Pagination
+              items={this.props.getData}
               onChangePage={this.onChangePage}
               pageSize={this.state.pageSize}
-            />
+            /> */}
           </Row>
         </Card>
       </TableDiv>
     );
   }
 }
-// export default PaginationTable;
-
-// const mapStateToProps = state => {
-//   return {
-
-//       ctr: state.ctr.counter,
-//       storedResults: state.res.results
-//   }
-// };
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//       onIncrementCounter: () => dispatch(actionCreators.increment()),
-//       onDecrementCounter: () => dispatch(actionCreators.decrement()),
-//       onAddCounter: () => dispatch(actionCreators.add(10)),
-//       onSubtractCounter: () => dispatch(actionCreators.subtract(15)),
-//       onStoreResult: (result) => dispatch(actionCreators.storeResult(result)),
-//       onDeleteResult: (id) => dispatch(actionCreators.deleteResult(id))
-//   }
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Counter);
 
 const mapStateToProps = state => {
-  console.log(state.getData.data)
+  console.log(state.getData.data);
   return { getData: state.getData.data };
 };
 
-export default connect( mapStateToProps, {getDataa})(PaginationTable);
-
-// import React, { Component } from "react";
-// import { connect } from "react-redux";
-// import { fetchPosts } from "../actions";
-// import UserHeader from "./UserHeader";
-
-// class PostList extends Component {
-//   componentDidMount() {
-//     this.props.fetchPosts();
-//   }
-
-//   renderList() {
-//     return this.props.post.map(post => {
-//       return (
-//         <div key={post.id}>
-//           <h2>{post.title}</h2>
-//           <div>
-//             <UserHeader userId={post.userId} />
-//           </div>
-//           <p>{post.body}</p>
-//         </div>
-//       );
-//     });
-//   }
-
-//   render() {
-//     return (
-//       <ul>
-//         <li>{this.renderList()}</li>
-//       </ul>
-//     );
-//   }
-// }
-
-// const mapStateToProps = state => {
-//   return { post: state.post };
-// };
-
-// export default connect(
-//   mapStateToProps,
-//   { fetchPosts }
-// )(PostList);
+export default connect(
+  mapStateToProps,
+  { fetchData }
+)(PaginationTable);
