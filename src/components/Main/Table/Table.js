@@ -60,14 +60,14 @@ class PaginationTable extends Component {
 
   componentDidMount() {
     const test = this.props.fetchData();
-
+    // this.setState({ data: test });
     console.log(test);
   }
 
   handleFilterSelectAll = () => {
     console.log(this.props.getData);
+    // return this.props.getData;
     return this.props.getData;
-
     // const test = this.props.fetchData();
     // console.log(test);
     // const data = getData();
@@ -82,6 +82,7 @@ class PaginationTable extends Component {
     const newData = this.props.getData.filter(dat => {
       return dat.isFiltered ? dat : null;
     });
+
     console.log(newData);
     this.setState({
       data: [...newData]
@@ -207,8 +208,8 @@ class PaginationTable extends Component {
           <Calendar />
 
           <Filters
-            onFilterSelect={this.handleFilterSelect}
-            onFilterSelectAll={this.handleFilterSelectAll}
+          // onFilterSelect={this.handleFilterSelect}
+          // onFilterSelectAll={this.handleFilterSelectAll}
           />
         </Row>
 
@@ -293,11 +294,11 @@ class PaginationTable extends Component {
               pageSize={this.state.pageSize}
               onChange={this.handleSelect}
             />
-            {/* <Pagination
+            <Pagination
               items={this.props.getData}
               onChangePage={this.onChangePage}
               pageSize={this.state.pageSize}
-            /> */}
+            />
           </Row>
         </Card>
       </TableDiv>

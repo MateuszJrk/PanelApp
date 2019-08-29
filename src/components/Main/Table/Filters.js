@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import {
   DropdownItem,
@@ -58,4 +59,9 @@ const Filters = props => {
   );
 };
 
-export default Filters;
+const mapStateToProps = state => {
+  console.log(state.getData.data);
+  return { getData: state.getData.data };
+};
+
+export default connect(mapStateToProps)(Filters);

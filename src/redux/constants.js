@@ -16,3 +16,6 @@ export const THEME_TOGGLE = "THEME_TOGGLE";
 
 //Data
 export const GET_DATA = "GET_DATA";
+export const FILTER_DATA = "FILTER_DATA";
+export const FILTER_DATA_ALL = "FILTER_DATA_ALL";
+export const SEARCH_DATA = "SEARCH_DATA";
