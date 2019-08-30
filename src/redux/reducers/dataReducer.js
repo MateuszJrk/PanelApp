@@ -6,25 +6,35 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-  console.log(state, action);
   switch (action.type) {
     case types.GET_DATA:
       return {
+        ...state,
         data: action.payload
       };
+
     case types.FILTER_DATA:
-      console.log(state);
-
-      return state.filter(({ dat }) => (dat.isFiltered ? dat : null));
-
+      console.log(action.payload);
+      return {
+        ...state,
+        data: action.payload.filter(obj => {
+          return obj.isFiltered ? obj : null;
+        })
+      };
     case types.FILTER_DATA_ALL:
       return {
+        ...state,
         data: action.payload
       };
     case types.SEARCH_DATA:
+      console.log(action.payload);
       return {
-        ...state,
-        text: action.text
+        text: action.text,
+
+        data: state.data.filter(obj => {
+          console.log(action.text);
+          return obj.name.toLowerCase().includes(action.text.toLowerCase());
+        })
       };
 
     default:

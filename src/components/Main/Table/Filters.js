@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { filterData, filterDataAll } from "../../../redux/actions/dataActions";
+
 import {
   DropdownItem,
   DropdownMenu,
@@ -16,15 +18,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Filters = props => {
-  const { onFilterSelect, onFilterSelectAll } = props;
-
   return (
     <UncontrolledDropdown className="mt-4 ml-2">
       <DropdownToggle tag="a">
         <span className="text-primary">+ Add filter</span>
       </DropdownToggle>
       <DropdownMenu right>
-        <DropdownItem onClick={() => onFilterSelectAll()}>All</DropdownItem>
+        <DropdownItem onClick={() => props.dispatch(filterDataAll())}>
+          All
+        </DropdownItem>
         <DropdownItem>Unprocessed</DropdownItem>
         <DropdownItem>
           <FontAwesomeIcon
@@ -33,7 +35,7 @@ const Filters = props => {
           />
           Preview
         </DropdownItem>
-        <DropdownItem onClick={() => onFilterSelect()}>
+        <DropdownItem onClick={() => props.dispatch(filterData())}>
           <FontAwesomeIcon
             icon={faSpinner}
             className="cursor-pointer text-info mr-1 "
@@ -59,9 +61,4 @@ const Filters = props => {
   );
 };
 
-const mapStateToProps = state => {
-  console.log(state.getData.data);
-  return { getData: state.getData.data };
-};
-
-export default connect(mapStateToProps)(Filters);
+export default connect()(Filters);

@@ -1,29 +1,32 @@
 import * as types from "../constants";
 import getData from "../../components/Data";
 
+const res = getData();
 export const fetchData = () => {
-  const res = getData();
   return {
     type: types.GET_DATA,
     payload: res
   };
 };
 
-export const filterData = isFiltered => {
+export const filterData = () => {
   return {
     type: types.FILTER_DATA,
-    isFiltered
+    payload: res
   };
 };
 
-export const filterDataAll = isFiltered => {
+export const filterDataAll = () => {
   return {
     type: types.FILTER_DATA_ALL,
-    isFiltered
+    payload: res
   };
 };
 
-export const searchData = (text = "") => ({
-  type: "SEARCH_DATA",
-  text
-});
+export const searchData = (text = "") => {
+  return {
+    type: types.SEARCH_DATA,
+    text,
+    payload: res
+  };
+};

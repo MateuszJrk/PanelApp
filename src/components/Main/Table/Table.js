@@ -64,31 +64,6 @@ class PaginationTable extends Component {
     console.log(test);
   }
 
-  handleFilterSelectAll = () => {
-    console.log(this.props.getData);
-    // return this.props.getData;
-    return this.props.getData;
-    // const test = this.props.fetchData();
-    // console.log(test);
-    // const data = getData();
-    // this.setState({ data });
-  };
-
-  handleSearch = query => {
-    this.setState({ search: query, selectedGenre: null, currentPage: 1 });
-  };
-
-  handleFilterSelect = () => {
-    const newData = this.props.getData.filter(dat => {
-      return dat.isFiltered ? dat : null;
-    });
-
-    console.log(newData);
-    this.setState({
-      data: [...newData]
-    });
-  };
-
   handleSort = path => {
     const sortColumn = { ...this.state.sortColumn };
 
@@ -207,10 +182,7 @@ class PaginationTable extends Component {
         <Row>
           <Calendar />
 
-          <Filters
-          // onFilterSelect={this.handleFilterSelect}
-          // onFilterSelectAll={this.handleFilterSelectAll}
-          />
+          <Filters />
         </Row>
 
         <Card className="flex-fill w-100  ">
@@ -249,6 +221,7 @@ class PaginationTable extends Component {
                 </Ths>
                 <Ths
                   onClick={() => {
+                    console.log(this.props);
                     this.handleSort("size");
                   }}
                 >
@@ -308,7 +281,7 @@ class PaginationTable extends Component {
 
 const mapStateToProps = state => {
   console.log(state.getData.data);
-  return { getData: state.getData.data };
+  return { getData: state.getData.data, filter: state.getData.text };
 };
 
 export default connect(
