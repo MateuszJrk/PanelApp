@@ -28,15 +28,16 @@ export default function(state = initialState, action) {
       };
     case types.SEARCH_DATA:
       console.log(action.payload);
-      const filtered = state.data.filter(obj => {
-        return obj.name.toLowerCase().includes(action.text.toLowerCase());
-      });
-      const test = state.data;
+      const filtered = state.data;
 
       return {
         ...state,
-        text: action.text.length ? action.text : "",
-        data: action.text.length ? filtered : test
+        text: action.text,
+        data: action.text
+          ? filtered.filter(obj => {
+              return obj.name.toLowerCase().includes(action.text.toLowerCase());
+            })
+          : action.payload
       };
 
     default:

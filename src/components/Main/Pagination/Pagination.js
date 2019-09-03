@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import styled from "styled-components";
 import { PaginationItem, PaginationLink } from "reactstrap";
 
@@ -12,26 +14,41 @@ import { PaginationItem, PaginationLink } from "reactstrap";
 //   initialPage: 1
 // };
 
-export default class PaginationMenu extends React.Component {
-  state = { pager: {} };
+class PaginationMenu extends React.Component {
+  state = { pager: {}, pageSize: 7, currentPage: 1 };
 
   componentWillMount() {
     // set page if items array isn't empty
-    if (this.props.items && this.props.items.length) {
-      console.log(this.props.items);
+    if (this.props.getData && this.props.getData.length) {
+      console.log(this.props.pageSize);
       this.setPage(this.props.initialPage);
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     // reset page if items array has changed
-    if (this.props.items !== prevProps.items) {
+    if (this.props.getData !== prevProps.getData) {
       this.setPage(this.props.initialPage);
     }
   }
 
+  handlePageChange = page => {
+    this.setState({ currentPage: page });
+  };
+
+  handleNextPage = currPage => {
+    this.setState({ currentPage: currPage + 1 });
+  };
+  handlePrevPage = currPage => {
+    this.setState({ currentPage: currPage - 1 });
+  };
+  onChangePage = pageOfItems => {
+    //   update state with new page of items
+    this.setState({ pageOfItems });
+  };
+
   setPage(page) {
-    const items = this.props.items;
+    const items = this.props.getData;
 
     let pager = this.state.pager;
 
@@ -41,7 +58,7 @@ export default class PaginationMenu extends React.Component {
 
     // get new pager object for specified page
     pager = this.getPager(items.length, page);
-
+    console.log(this.props.pageSize);
     // get new page of items from items array
     const pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
 
@@ -58,10 +75,11 @@ export default class PaginationMenu extends React.Component {
 
     // default page size
     pageSize = parseInt(this.props.pageSize.value);
+    console.log(pageSize);
 
     // calculate total pages
     const totalPages = Math.ceil(totalItems / pageSize);
-
+    console.log(`totalPages: ${totalPages}`);
     let startPage, endPage;
     if (totalPages <= 5) {
       // less than 10 total pages so show all
@@ -106,7 +124,7 @@ export default class PaginationMenu extends React.Component {
 
   render() {
     const pager = this.state.pager;
-
+    console.log(pager);
     const Pag = styled.div`
       margin-right: 25px;
       @media screen and (max-width: 40em) {
@@ -162,3 +180,14 @@ export default class PaginationMenu extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  console.log(state);
+
+  return {
+    getData: state.getData.data,
+    filter: state.getData
+  };
+};
+
+export default connect(mapStateToProps)(PaginationMenu);

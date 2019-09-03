@@ -52,16 +52,12 @@ class PaginationTable extends Component {
   state = {
     data: [],
     sortColumn: { path: "title", order: "asc" },
-    currentPage: 1,
-    pageSize: { value: 6 },
     pageOfItems: [],
-    search: ""
+    pageSize: { value: 6 }
   };
 
   componentDidMount() {
-    const test = this.props.fetchData();
-    // this.setState({ data: test });
-    console.log(test);
+    this.props.fetchData();
   }
 
   handleSort = path => {
@@ -74,11 +70,11 @@ class PaginationTable extends Component {
       sortColumn.order = "asc";
     }
 
-    let sort = { ...this.props.getData };
+    let sort = { ...this.props.pageOfItems };
 
     sort = _.orderBy(sort, sortColumn.path, sortColumn.order);
-
-    this.setState({ sortColumn, data: sort });
+    console.log(sortColumn);
+    this.setState({ sortColumn, pageOfItems: sort });
   };
   renderSortIconName = path => {
     if (this.state.sortColumn.order === "asc" && path === "name")
@@ -155,25 +151,17 @@ class PaginationTable extends Component {
       );
     }
   };
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
-
-  handleNextPage = currPage => {
-    this.setState({ currentPage: currPage + 1 });
-  };
-  handlePrevPage = currPage => {
-    this.setState({ currentPage: currPage - 1 });
-  };
-  onChangePage = pageOfItems => {
-    //   update state with new page of items
-    this.setState({ pageOfItems });
-  };
 
   handleSelect = e => {
-    console.log(e);
     this.setState({ pageSize: { value: e.target.value } });
-    console.log(this.state.pageSize.value);
+    console.log(typeof this.state.pageSize.value);
+  };
+
+  onChangePage = pageOfItems => {
+    //   update state with new page of items
+
+    this.setState({ pageOfItems });
+    console.log(this.state);
   };
 
   render() {
@@ -235,7 +223,7 @@ class PaginationTable extends Component {
               </Tr>
             </Thead>
             <Tbody>
-              {this.props.getData.map(data => (
+              {this.state.pageOfItems.map(data => (
                 <Tr key={data._id} className="py-4">
                   <Tds>
                     <h4>
@@ -268,10 +256,9 @@ class PaginationTable extends Component {
               onChange={this.handleSelect}
             />
             <Pagination
-              items={this.props.getData}
               onChangePage={this.onChangePage}
               pageSize={this.state.pageSize}
-            />
+            ></Pagination>
           </Row>
         </Card>
       </TableDiv>
@@ -280,8 +267,10 @@ class PaginationTable extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state.getData.data);
-  return { getData: state.getData.data, filter: state.getData.text };
+  return {
+    getData: state.getData.data,
+    filter: state.getData.text
+  };
 };
 
 export default connect(
