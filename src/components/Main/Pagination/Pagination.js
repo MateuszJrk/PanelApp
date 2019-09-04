@@ -58,7 +58,7 @@ class PaginationMenu extends React.Component {
 
     // get new pager object for specified page
     pager = this.getPager(items.length, page);
-    console.log(this.props.pageSize);
+
     // get new page of items from items array
     const pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
 
@@ -75,11 +75,10 @@ class PaginationMenu extends React.Component {
 
     // default page size
     pageSize = parseInt(this.props.pageSize.value);
-    console.log(pageSize);
 
     // calculate total pages
     const totalPages = Math.ceil(totalItems / pageSize);
-    console.log(`totalPages: ${totalPages}`);
+
     let startPage, endPage;
     if (totalPages <= 5) {
       // less than 10 total pages so show all
@@ -124,7 +123,7 @@ class PaginationMenu extends React.Component {
 
   render() {
     const pager = this.state.pager;
-    console.log(pager);
+
     const Pag = styled.div`
       margin-right: 25px;
       @media screen and (max-width: 40em) {
@@ -185,8 +184,7 @@ const mapStateToProps = state => {
   console.log(state);
 
   return {
-    getData: state.getData.data,
-    filter: state.getData
+    getData: state.getData.data
   };
 };
 

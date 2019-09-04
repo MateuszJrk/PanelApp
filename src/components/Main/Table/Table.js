@@ -14,11 +14,11 @@ import {
   Row
 } from "reactstrap";
 import { MoreHorizontal } from "react-feather";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLongArrowAltUp,
-  faLongArrowAltDown
-} from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faLongArrowAltUp,
+//   faLongArrowAltDown
+// } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "../Pagination/Pagination";
 import Calendar from "./Calendar";
 import Filters from "./Filters";
@@ -61,6 +61,7 @@ class PaginationTable extends Component {
   }
 
   handleSort = path => {
+    console.log("click!");
     const sortColumn = { ...this.state.sortColumn };
 
     if (sortColumn.path === path)
@@ -70,98 +71,25 @@ class PaginationTable extends Component {
       sortColumn.order = "asc";
     }
 
-    let sort = { ...this.props.pageOfItems };
+    let sort = { ...this.props.fetchData().payload };
 
     sort = _.orderBy(sort, sortColumn.path, sortColumn.order);
-    console.log(sortColumn);
-    this.setState({ sortColumn, pageOfItems: sort });
-  };
-  renderSortIconName = path => {
-    if (this.state.sortColumn.order === "asc" && path === "name")
-      return (
-        <>
-          <FontAwesomeIcon
-            icon={faLongArrowAltUp}
-            className=" text-muted"
-            style={{ opacity: 0.4 }}
-          />
-          <FontAwesomeIcon icon={faLongArrowAltDown} className="  text-muted" />
-        </>
-      );
-    else {
-      return (
-        <>
-          <FontAwesomeIcon icon={faLongArrowAltUp} className=" text-muted" />
-          <FontAwesomeIcon
-            style={{ opacity: 0.4 }}
-            icon={faLongArrowAltDown}
-            className="  text-muted"
-          />
-        </>
-      );
-    }
-  };
-  renderSortIconSize = path => {
-    if (this.state.sortColumn.order === "asc" && path === "size")
-      return (
-        <>
-          <FontAwesomeIcon
-            icon={faLongArrowAltUp}
-            className=" text-muted"
-            style={{ opacity: 0.4 }}
-          />
-          <FontAwesomeIcon icon={faLongArrowAltDown} className="  text-muted" />
-        </>
-      );
-    else {
-      return (
-        <>
-          <FontAwesomeIcon icon={faLongArrowAltUp} className=" text-muted" />
-          <FontAwesomeIcon
-            style={{ opacity: 0.4 }}
-            icon={faLongArrowAltDown}
-            className="  text-muted"
-          />
-        </>
-      );
-    }
-  };
-  renderSortIconDate = path => {
-    if (this.state.sortColumn.order === "asc" && path === "date")
-      return (
-        <>
-          <FontAwesomeIcon
-            icon={faLongArrowAltUp}
-            className=" text-muted"
-            style={{ opacity: 0.4 }}
-          />
-          <FontAwesomeIcon icon={faLongArrowAltDown} className="  text-muted" />
-        </>
-      );
-    else {
-      return (
-        <>
-          <FontAwesomeIcon icon={faLongArrowAltUp} className=" text-muted" />
-          <FontAwesomeIcon
-            style={{ opacity: 0.4 }}
-            icon={faLongArrowAltDown}
-            className="  text-muted"
-          />
-        </>
-      );
-    }
+    console.log(sort, sortColumn.path, sortColumn.order);
+    this.setState({
+      sortColumn,
+      data: sort
+    });
+    console.log(this.state.data);
   };
 
   handleSelect = e => {
     this.setState({ pageSize: { value: e.target.value } });
-    console.log(typeof this.state.pageSize.value);
   };
 
   onChangePage = pageOfItems => {
     //   update state with new page of items
 
     this.setState({ pageOfItems });
-    console.log(this.state);
   };
 
   render() {
@@ -198,14 +126,14 @@ class PaginationTable extends Component {
                     this.handleSort("name");
                   }}
                 >
-                  Name {this.renderSortIconName("name")}
+                  Name
                 </Ths>
                 <Ths
                   onClick={() => {
                     this.handleSort("date");
                   }}
                 >
-                  Date {this.renderSortIconDate("date")}
+                  Date
                 </Ths>
                 <Ths
                   onClick={() => {
@@ -213,7 +141,7 @@ class PaginationTable extends Component {
                     this.handleSort("size");
                   }}
                 >
-                  Size {this.renderSortIconSize("size")}
+                  Size
                 </Ths>
                 <Ths>Status</Ths>
                 <Ths>Result</Ths>
@@ -258,6 +186,7 @@ class PaginationTable extends Component {
             <Pagination
               onChangePage={this.onChangePage}
               pageSize={this.state.pageSize}
+              data={this.state.data}
             ></Pagination>
           </Row>
         </Card>
