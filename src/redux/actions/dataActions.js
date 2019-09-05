@@ -2,6 +2,7 @@ import * as types from "../constants";
 import getData from "../../components/Data";
 
 const res = getData();
+
 export const fetchData = () => {
   return {
     type: types.GET_DATA,
@@ -28,5 +29,13 @@ export const searchData = (text = "") => {
     type: types.SEARCH_DATA,
     text,
     payload: res
+  };
+};
+
+export const sortData = (path = "") => {
+  return {
+    type: types.SORT_DATA,
+    payload: res,
+    path
   };
 };

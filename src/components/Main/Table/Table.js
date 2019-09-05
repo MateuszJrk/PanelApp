@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { fetchData } from "../../../redux/actions/dataActions";
+import { fetchData, sortData } from "../../../redux/actions/dataActions";
 
 import {
   Card,
@@ -26,7 +26,6 @@ import Dropdown from "./Dropdown";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
-import _ from "lodash";
 
 const Ths = styled.th`
   text-align: center;
@@ -51,7 +50,7 @@ const Tr = styled.tr`
 class PaginationTable extends Component {
   state = {
     data: [],
-    sortColumn: { path: "title", order: "asc" },
+
     pageOfItems: [],
     pageSize: { value: 6 }
   };
@@ -59,28 +58,6 @@ class PaginationTable extends Component {
   componentDidMount() {
     this.props.fetchData();
   }
-
-  handleSort = path => {
-    console.log("click!");
-    const sortColumn = { ...this.state.sortColumn };
-
-    if (sortColumn.path === path)
-      sortColumn.order = sortColumn.order === "asc" ? "desc" : "asc";
-    else {
-      sortColumn.path = path;
-      sortColumn.order = "asc";
-    }
-
-    let sort = { ...this.props.fetchData().payload };
-
-    sort = _.orderBy(sort, sortColumn.path, sortColumn.order);
-    console.log(sort, sortColumn.path, sortColumn.order);
-    this.setState({
-      sortColumn,
-      data: sort
-    });
-    console.log(this.state.data);
-  };
 
   handleSelect = e => {
     this.setState({ pageSize: { value: e.target.value } });
@@ -121,28 +98,9 @@ class PaginationTable extends Component {
             <Thead>
               <Tr className="border-0">
                 <Ths>Type</Ths>
-                <Ths
-                  onClick={() => {
-                    this.handleSort("name");
-                  }}
-                >
-                  Name
-                </Ths>
-                <Ths
-                  onClick={() => {
-                    this.handleSort("date");
-                  }}
-                >
-                  Date
-                </Ths>
-                <Ths
-                  onClick={() => {
-                    console.log(this.props);
-                    this.handleSort("size");
-                  }}
-                >
-                  Size
-                </Ths>
+                <Ths onClick={() => this.props.sortData("name")}>Name</Ths>
+                <Ths onClick={() => this.props.sortData("date")}>Date</Ths>
+                <Ths onClick={() => this.props.sortData("size")}>Size</Ths>
                 <Ths>Status</Ths>
                 <Ths>Result</Ths>
                 <Ths>Thumbnail</Ths>
@@ -204,5 +162,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchData }
+  { fetchData, sortData }
 )(PaginationTable);
