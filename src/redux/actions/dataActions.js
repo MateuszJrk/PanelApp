@@ -39,3 +39,10 @@ export const sortData = (path = "") => {
     path
   };
 };
+
+export const changePageSize = (pageSize = "") => {
+  return {
+    type: types.CHANGE_PAGE_SIZE,
+    pageSize
+  };
+};

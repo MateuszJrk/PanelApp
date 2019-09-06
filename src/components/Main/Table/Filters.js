@@ -24,7 +24,12 @@ const Filters = props => {
         <span className="text-primary">+ Add filter</span>
       </DropdownToggle>
       <DropdownMenu right>
-        <DropdownItem onClick={() => props.dispatch(filterDataAll())}>
+        <DropdownItem
+          onClick={() => {
+            console.log(props);
+            return props.dispatch(filterDataAll());
+          }}
+        >
           All
         </DropdownItem>
         <DropdownItem>Unprocessed</DropdownItem>

@@ -1,4 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
+import { changePageSize } from "../../../redux/actions/dataActions";
+
 import { Col } from "reactstrap";
 import styled from "styled-components";
 
@@ -27,19 +30,36 @@ const Option = styled.option`
   color: black;
 `;
 
-const DropdownSelect = props => {
-  const { onChange, pageSize } = props;
+class DropdownSelect extends React.Component {
+  render() {
+    return (
+      <Col xs="6" xl className="mb-2 ml-2">
+        <Select
+          value={this.props.pageSize}
+          onChange={e => {
+            console.log(this.props.pageSize);
+            return this.props.changePageSize(e.target.value);
+          }}
+        >
+          <Option value="10">10</Option>
+          <Option value="20">20</Option>
+          <Option value="30">30</Option>
+          <Option value="40">40</Option>
+        </Select>
+      </Col>
+    );
+  }
+}
 
-  return (
-    <Col xs="6" xl className="mb-2 ml-2">
-      <Select value={pageSize.value} onChange={e => onChange(e)}>
-        <Option value="6">6</Option>
-        <Option value="20">20</Option>
-        <Option value="30">30</Option>
-        <Option value="40">40</Option>
-      </Select>
-    </Col>
-  );
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    pageSize: state.getData.pageSize
+  };
 };
 
-export default DropdownSelect;
+//
+export default connect(
+  mapStateToProps,
+  { changePageSize }
+)(DropdownSelect);

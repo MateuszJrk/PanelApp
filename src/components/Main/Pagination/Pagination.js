@@ -4,23 +4,12 @@ import { connect } from "react-redux";
 import styled from "styled-components";
 import { PaginationItem, PaginationLink } from "reactstrap";
 
-// const propTypes = {
-//     items: React.PropTypes.array.isRequired,
-//   onChangePage: React.PropTypes.func.isRequired,
-//   initialPage: React.PropTypes.number
-// };
-
-// const defaultProps = {
-//   initialPage: 1
-// };
-
 class PaginationMenu extends React.Component {
-  state = { pager: {}, pageSize: 6, currentPage: 1 };
+  state = { pager: {}, currentPage: 1 };
 
   componentWillMount() {
     // set page if items array isn't empty
     if (this.props.getData && this.props.getData.length) {
-      console.log(this.props.pageSize);
       this.setPage(this.props.initialPage);
     }
   }
@@ -74,8 +63,9 @@ class PaginationMenu extends React.Component {
     currentPage = currentPage || 1;
 
     // default page size
-    pageSize = parseInt(this.state.pageSize);
-
+    console.log(this.props);
+    pageSize = parseInt(this.props.pageSize);
+    console.log(pageSize);
     // calculate total pages
     const totalPages = Math.ceil(totalItems / pageSize);
 
@@ -184,7 +174,8 @@ const mapStateToProps = state => {
   console.log(state);
 
   return {
-    getData: state.getData.data
+    getData: state.getData.data,
+    pageSize: state.getData.pageSize
   };
 };
 

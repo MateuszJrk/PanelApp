@@ -4,7 +4,8 @@ import _ from "lodash";
 const initialState = {
   data: [],
   text: "",
-  sortColumn: { path: "title", order: "asc" }
+  sortColumn: { path: "title", order: "asc" },
+  pageSize: 10
 };
 
 export default function(state = initialState, action) {
@@ -59,7 +60,11 @@ export default function(state = initialState, action) {
         ...state,
         data: _.orderBy(sorted, state.sortColumn.path, state.sortColumn.order)
       };
-
+    case types.CHANGE_PAGE_SIZE:
+      return {
+        ...state,
+        pageSize: action.pageSize
+      };
     default:
       return state;
   }

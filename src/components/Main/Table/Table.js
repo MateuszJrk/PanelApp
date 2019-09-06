@@ -49,19 +49,12 @@ const Tr = styled.tr`
 
 class PaginationTable extends Component {
   state = {
-    data: [],
-
-    pageOfItems: [],
-    pageSize: { value: 6 }
+    pageOfItems: []
   };
 
   componentDidMount() {
     this.props.fetchData();
   }
-
-  handleSelect = e => {
-    this.setState({ pageSize: { value: e.target.value } });
-  };
 
   onChangePage = pageOfItems => {
     //   update state with new page of items
@@ -137,15 +130,8 @@ class PaginationTable extends Component {
             </Tbody>
           </Table>
           <Row className="mt-4 ">
-            <Dropdown
-              pageSize={this.state.pageSize}
-              onChange={this.handleSelect}
-            />
-            <Pagination
-              onChangePage={this.onChangePage}
-              pageSize={this.state.pageSize}
-              data={this.state.data}
-            ></Pagination>
+            <Dropdown />
+            <Pagination onChangePage={this.onChangePage}></Pagination>
           </Row>
         </Card>
       </TableDiv>
@@ -155,8 +141,7 @@ class PaginationTable extends Component {
 
 const mapStateToProps = state => {
   return {
-    getData: state.getData.data,
-    filter: state.getData.text
+    getData: state.getData.data
   };
 };
 
