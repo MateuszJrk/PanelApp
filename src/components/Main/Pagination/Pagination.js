@@ -7,7 +7,7 @@ import { PaginationItem, PaginationLink } from "reactstrap";
 class PaginationMenu extends React.Component {
   state = { pager: {}, currentPage: 1 };
 
-  componentWillMount() {
+  componentDidMount() {
     // set page if items array isn't empty
     if (this.props.getData && this.props.getData.length) {
       this.setPage(this.props.initialPage);
@@ -64,7 +64,7 @@ class PaginationMenu extends React.Component {
 
     // default page size
     console.log(this.props);
-    pageSize = parseInt(this.props.pageSize);
+    pageSize = this.props.pageSize;
     console.log(pageSize);
     // calculate total pages
     const totalPages = Math.ceil(totalItems / pageSize);

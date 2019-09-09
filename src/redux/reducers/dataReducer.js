@@ -63,7 +63,8 @@ export default function(state = initialState, action) {
     case types.CHANGE_PAGE_SIZE:
       return {
         ...state,
-        pageSize: action.pageSize
+        pageSize: action.pageSize,
+        data: action.payload
       };
     default:
       return state;

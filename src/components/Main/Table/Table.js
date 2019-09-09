@@ -19,6 +19,7 @@ import { MoreHorizontal } from "react-feather";
 //   faLongArrowAltUp,
 //   faLongArrowAltDown
 // } from "@fortawesome/free-solid-svg-icons";
+
 import Pagination from "../Pagination/Pagination";
 import Calendar from "./Calendar";
 import Filters from "./Filters";
@@ -131,7 +132,7 @@ class PaginationTable extends Component {
           </Table>
           <Row className="mt-4 ">
             <Dropdown />
-            <Pagination onChangePage={this.onChangePage}></Pagination>
+            <Pagination onChangePage={this.onChangePage} />
           </Row>
         </Card>
       </TableDiv>

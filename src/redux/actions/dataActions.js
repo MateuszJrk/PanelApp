@@ -1,26 +1,26 @@
 import * as types from "../constants";
 import getData from "../../components/Data";
 
-const res = getData();
+const data = getData();
 
 export const fetchData = () => {
   return {
     type: types.GET_DATA,
-    payload: res
+    payload: data
   };
 };
 
 export const filterData = () => {
   return {
     type: types.FILTER_DATA,
-    payload: res
+    payload: data
   };
 };
 
 export const filterDataAll = () => {
   return {
     type: types.FILTER_DATA_ALL,
-    payload: res
+    payload: data
   };
 };
 
@@ -28,21 +28,22 @@ export const searchData = (text = "") => {
   return {
     type: types.SEARCH_DATA,
     text,
-    payload: res
+    payload: data
   };
 };
 
 export const sortData = (path = "") => {
   return {
     type: types.SORT_DATA,
-    payload: res,
+    payload: data,
     path
   };
 };
 
-export const changePageSize = (pageSize = "") => {
+export const changePageSize = pageSize => {
   return {
     type: types.CHANGE_PAGE_SIZE,
-    pageSize
+    pageSize: parseInt(pageSize),
+    payload: data
   };
 };
