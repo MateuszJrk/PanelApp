@@ -3,6 +3,17 @@ import { connect } from "react-redux";
 
 import styled from "styled-components";
 import { PaginationItem, PaginationLink } from "reactstrap";
+import PropTypes from "prop-types";
+
+const propTypes = {
+  onChangePage: PropTypes.func.isRequired,
+  initialPage: PropTypes.number
+};
+
+const defaultProps = {
+  initialPage: 1,
+  pageSize: 10
+};
 
 class PaginationMenu extends React.Component {
   state = { pager: {}, currentPage: 1 };
@@ -16,7 +27,10 @@ class PaginationMenu extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     // reset page if items array has changed
-    if (this.props.getData !== prevProps.getData) {
+    if (
+      this.props.getData !== prevProps.getData ||
+      this.props.pageSize !== prevProps.pageSize
+    ) {
       this.setPage(this.props.initialPage);
     }
   }
@@ -53,7 +67,6 @@ class PaginationMenu extends React.Component {
 
     // update state
     this.setState({ pager });
-
     // call change page function in parent component
     this.props.onChangePage(pageOfItems);
   }
@@ -63,9 +76,9 @@ class PaginationMenu extends React.Component {
     currentPage = currentPage || 1;
 
     // default page size
-    console.log(this.props);
-    pageSize = this.props.pageSize;
-    console.log(pageSize);
+
+    pageSize = this.props.pageSize.value;
+
     // calculate total pages
     const totalPages = Math.ceil(totalItems / pageSize);
 
@@ -170,12 +183,12 @@ class PaginationMenu extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  console.log(state);
+PaginationMenu.propTypes = propTypes;
+PaginationMenu.defaultProps = defaultProps;
 
+const mapStateToProps = state => {
   return {
-    getData: state.getData.data,
-    pageSize: state.getData.pageSize
+    getData: state.getData.data
   };
 };
 

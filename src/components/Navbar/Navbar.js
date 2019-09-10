@@ -42,10 +42,10 @@ class NavbarComponent extends React.Component {
               placeholder="Search ..."
               aria-label="Search"
               className="form-control-no-border mr-sm-2"
-              value={this.props.filter.text}
-              onChange={e => {
-                this.props.dispatch(searchData(e.target.value));
-              }}
+              onChange={e => searchData(e.target.value)}
+              // onChange={e => {
+              //   this.props.dispatch(searchData(e.target.value));
+              // }}
             />
           </Form>
 
@@ -110,4 +110,7 @@ const mapStateToProps = state => {
   return { getData: state.getData.data, filter: state.getData };
 };
 
-export default connect(mapStateToProps)(NavbarComponent);
+export default connect(
+  mapStateToProps,
+  { searchData }
+)(NavbarComponent);

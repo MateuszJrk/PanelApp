@@ -14,6 +14,7 @@ import {
   Row
 } from "reactstrap";
 import { MoreHorizontal } from "react-feather";
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {
 //   faLongArrowAltUp,
@@ -50,7 +51,8 @@ const Tr = styled.tr`
 
 class PaginationTable extends Component {
   state = {
-    pageOfItems: []
+    pageOfItems: [],
+    pageSize: { value: 10 }
   };
 
   componentDidMount() {
@@ -59,8 +61,11 @@ class PaginationTable extends Component {
 
   onChangePage = pageOfItems => {
     //   update state with new page of items
-
+    console.log(pageOfItems);
     this.setState({ pageOfItems });
+  };
+  handleSelect = e => {
+    this.setState({ pageSize: { value: e.target.value } });
   };
 
   render() {
@@ -131,8 +136,15 @@ class PaginationTable extends Component {
             </Tbody>
           </Table>
           <Row className="mt-4 ">
-            <Dropdown />
-            <Pagination onChangePage={this.onChangePage} />
+            <Dropdown
+              pageSize={this.state.pageSize}
+              onChange={this.handleSelect}
+            />
+
+            <Pagination
+              onChangePage={this.onChangePage}
+              pageSize={this.state.pageSize}
+            />
           </Row>
         </Card>
       </TableDiv>

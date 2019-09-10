@@ -4,14 +4,12 @@ import _ from "lodash";
 const initialState = {
   data: [],
   text: "",
-  sortColumn: { path: "title", order: "asc" },
-  pageSize: 10
+  sortColumn: { path: "title", order: "asc" }
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case types.GET_DATA:
-      console.log("action!");
       return {
         ...state,
         data: action.payload
@@ -31,23 +29,26 @@ export default function(state = initialState, action) {
         data: action.payload
       };
     case types.SEARCH_DATA:
-      console.log("click!");
-      console.log(action.payload);
-      const filtered = state.data;
-
       return {
         ...state,
-        text: action.text,
-        data: action.text
-          ? filtered.filter(obj => {
-              return obj.name.toLowerCase().includes(action.text.toLowerCase());
-            })
-          : action.payload
+        text: action.payload
       };
+    // console.log("click!");
+    // console.log(action.payload);
+    // const filtered = state.data;
+
+    // return {
+    //   ...state,
+    //   text: action.text,
+    //   data: action.text
+    //     ? filtered.filter(obj => {
+    //         return obj.name.toLowerCase().includes(action.text.toLowerCase());
+    //       })
+    //     : action.payload
+    // };
     case types.SORT_DATA:
-      console.log("click!");
       const sorted = { ...state.data };
-      console.log(action.path);
+
       if (state.sortColumn.path === action.path)
         state.sortColumn.order =
           state.sortColumn.order === "asc" ? "desc" : "asc";
@@ -60,12 +61,7 @@ export default function(state = initialState, action) {
         ...state,
         data: _.orderBy(sorted, state.sortColumn.path, state.sortColumn.order)
       };
-    case types.CHANGE_PAGE_SIZE:
-      return {
-        ...state,
-        pageSize: action.pageSize,
-        data: action.payload
-      };
+
     default:
       return state;
   }

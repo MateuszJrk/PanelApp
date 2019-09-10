@@ -24,7 +24,7 @@ export const filterDataAll = () => {
   };
 };
 
-export const searchData = (text = "") => {
+export const searchData = text => {
   return {
     type: types.SEARCH_DATA,
     text,
@@ -37,13 +37,5 @@ export const sortData = (path = "") => {
     type: types.SORT_DATA,
     payload: data,
     path
-  };
-};
-
-export const changePageSize = pageSize => {
-  return {
-    type: types.CHANGE_PAGE_SIZE,
-    pageSize: parseInt(pageSize),
-    payload: data
   };
 };
