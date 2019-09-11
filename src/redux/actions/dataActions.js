@@ -24,7 +24,7 @@ export const filterDataAll = () => {
   };
 };
 
-export const searchData = text => {
+export const searchData = (text = "") => {
   return {
     type: types.SEARCH_DATA,
     text,

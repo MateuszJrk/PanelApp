@@ -30,7 +30,7 @@ class NavbarComponent extends React.Component {
             className="sidebar-toggle d-flex mr-2"
             onClick={() => {
               console.log(this.props);
-              this.props.dispatch(toggleSidebar());
+              this.props.toggleSidebar();
             }}
           >
             <i className="hamburger align-self-center" />
@@ -42,10 +42,10 @@ class NavbarComponent extends React.Component {
               placeholder="Search ..."
               aria-label="Search"
               className="form-control-no-border mr-sm-2"
-              onChange={e => searchData(e.target.value)}
-              // onChange={e => {
-              //   this.props.dispatch(searchData(e.target.value));
-              // }}
+              value={this.props.filter}
+              onChange={e => {
+                this.props.searchData(e.target.value);
+              }}
             />
           </Form>
 
@@ -107,10 +107,10 @@ class NavbarComponent extends React.Component {
 
 const mapStateToProps = state => {
   console.log(state);
-  return { getData: state.getData.data, filter: state.getData };
+  return { getData: state.getData.data, filter: state.getData.text };
 };
 
 export default connect(
   mapStateToProps,
-  { searchData }
+  { searchData, toggleSidebar }
 )(NavbarComponent);

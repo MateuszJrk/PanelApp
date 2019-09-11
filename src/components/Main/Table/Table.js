@@ -15,11 +15,11 @@ import {
 } from "reactstrap";
 import { MoreHorizontal } from "react-feather";
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faLongArrowAltUp,
-//   faLongArrowAltDown
-// } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLongArrowAltUp,
+  faLongArrowAltDown
+} from "@fortawesome/free-solid-svg-icons";
 
 import Pagination from "../Pagination/Pagination";
 import Calendar from "./Calendar";
@@ -97,9 +97,39 @@ class PaginationTable extends Component {
             <Thead>
               <Tr className="border-0">
                 <Ths>Type</Ths>
-                <Ths onClick={() => this.props.sortData("name")}>Name</Ths>
-                <Ths onClick={() => this.props.sortData("date")}>Date</Ths>
-                <Ths onClick={() => this.props.sortData("size")}>Size</Ths>
+                <Ths name="Name" onClick={() => this.props.sortData("name")}>
+                  Name
+                  <FontAwesomeIcon
+                    icon={faLongArrowAltUp}
+                    className=" text-muted"
+                  />
+                  <FontAwesomeIcon
+                    icon={faLongArrowAltDown}
+                    className=" text-muted"
+                  />
+                </Ths>
+                <Ths onClick={() => this.props.sortData("date")}>
+                  Date
+                  <FontAwesomeIcon
+                    icon={faLongArrowAltUp}
+                    className=" text-muted"
+                  />
+                  <FontAwesomeIcon
+                    icon={faLongArrowAltDown}
+                    className=" text-muted"
+                  />
+                </Ths>
+                <Ths onClick={() => this.props.sortData("size")}>
+                  Size
+                  <FontAwesomeIcon
+                    icon={faLongArrowAltUp}
+                    className=" text-muted"
+                  />
+                  <FontAwesomeIcon
+                    icon={faLongArrowAltDown}
+                    className=" text-muted"
+                  />
+                </Ths>
                 <Ths>Status</Ths>
                 <Ths>Result</Ths>
                 <Ths>Thumbnail</Ths>
