@@ -25,7 +25,7 @@ class PaginationMenu extends React.Component {
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     // reset page if items array has changed
     if (
       this.props.getData !== prevProps.getData ||

@@ -73,7 +73,6 @@ class PaginationTable extends Component {
       <TableDiv>
         <Row>
           <Calendar />
-
           <Filters />
         </Row>
 

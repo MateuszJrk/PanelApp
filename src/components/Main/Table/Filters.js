@@ -26,7 +26,6 @@ const Filters = props => {
       <DropdownMenu right>
         <DropdownItem
           onClick={() => {
-            console.log(props);
             return props.dispatch(filterDataAll());
           }}
         >

@@ -15,17 +15,13 @@ const Input = styled.input`
     width: 30%;
   }
 `;
-
-class Calendar extends React.Component {
-  render() {
-    return (
-      <Input
-        data-date-format="dd/mm/yyyy"
-        id="datepicker"
-        placeholder="dd/mm/yyyy"
-      />
-    );
-  }
-}
-
+const Calendar = () => {
+  return (
+    <Input
+      data-date-format="dd/mm/yyyy"
+      id="datepicker"
+      placeholder="dd/mm/yyyy"
+    />
+  );
+};
 export default Calendar;

@@ -6,9 +6,9 @@ import Main from "../components/Main";
 import Navbar from "../components/Navbar/Navbar";
 import Content from "../components/Content";
 import Footer from "../components/Footer/Footer";
-import Statistics from "../components/Main/Statistics";
+import Statistics from "../components/Main/Statistics/Statistics";
 
-import MainContent from "../components/Main/Main";
+import Table from "../components/Main/Table/Table";
 
 import Settings from "../components/Settings";
 
@@ -20,7 +20,7 @@ const Dashboard = () => (
         <Navbar />
         <Content>
           <Statistics />
-          <MainContent />
+          <Table />
         </Content>
         <Footer />
         <Settings />
