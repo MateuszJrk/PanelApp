@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { fetchData, sortData } from "../../../redux/actions/dataActions";
+import {
+  fetchData,
+  sortData,
+  deleteData,
+  changeCheckbox
+} from "../../../redux/actions/dataActions";
 
 import {
   Card,
@@ -18,7 +23,9 @@ import { MoreHorizontal } from "react-feather";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowAltUp,
-  faLongArrowAltDown
+  faLongArrowAltDown,
+  faPen,
+  faLayerGroup
 } from "@fortawesome/free-solid-svg-icons";
 
 import Pagination from "../Pagination/Pagination";
@@ -48,11 +55,34 @@ const Tr = styled.tr`
   border-bottom: 1px solid #d5d9e0;
   border-top: 1px solid #d5d9e0;
 `;
+const Ul = styled.ul`
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0px;
+`;
+const ButtonTable = styled.button`
+  cursor: pointer;
+  background: #495057;
+  font-size: 14px;
+  border-radius: 3px;
+  color: white;
+  border: 2px solid #495057;
+  transition: 0.5s all ease-out;
+  &:hover {
+    background-color: #000000;
+    color: white;
+  }
+  @media screen and (max-width: 40em) {
+    font-size: 20px;
+  }
+`;
 
 class PaginationTable extends Component {
   state = {
     pageOfItems: [],
-    pageSize: { value: 10 }
+    pageSize: { value: 3 },
+    isChecked: true
   };
 
   componentDidMount() {
@@ -61,11 +91,15 @@ class PaginationTable extends Component {
 
   onChangePage = pageOfItems => {
     //   update state with new page of items
-    console.log(pageOfItems);
+    console.log(this.props.getData);
     this.setState({ pageOfItems });
   };
   handleSelect = e => {
     this.setState({ pageSize: { value: e.target.value } });
+  };
+  changeCheckbox = id => {
+    console.log(this.state.isChecked, id.target.id);
+    this.setState({ isChecked: !this.state.isChecked });
   };
 
   render() {
@@ -86,7 +120,9 @@ class PaginationTable extends Component {
                 <DropdownMenu right>
                   <DropdownItem>Compose</DropdownItem>
                   <DropdownItem>Combine</DropdownItem>
-                  <DropdownItem>Delete</DropdownItem>
+                  <DropdownItem onClick={() => this.props.deleteData()}>
+                    Delete
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </div>
@@ -96,7 +132,11 @@ class PaginationTable extends Component {
             <Thead>
               <Tr className="border-0">
                 <Ths>Type</Ths>
-                <Ths name="Name" onClick={() => this.props.sortData("name")}>
+                <Ths
+                  name="Name"
+                  onClick={() => this.props.sortData("name")}
+                  className="cursor-pointer"
+                >
                   Name
                   <FontAwesomeIcon
                     icon={faLongArrowAltUp}
@@ -107,7 +147,10 @@ class PaginationTable extends Component {
                     className=" text-muted"
                   />
                 </Ths>
-                <Ths onClick={() => this.props.sortData("date")}>
+                <Ths
+                  onClick={() => this.props.sortData("date")}
+                  className="cursor-pointer"
+                >
                   Date
                   <FontAwesomeIcon
                     icon={faLongArrowAltUp}
@@ -118,7 +161,10 @@ class PaginationTable extends Component {
                     className=" text-muted"
                   />
                 </Ths>
-                <Ths onClick={() => this.props.sortData("size")}>
+                <Ths
+                  onClick={() => this.props.sortData("size")}
+                  className="cursor-pointer"
+                >
                   Size
                   <FontAwesomeIcon
                     icon={faLongArrowAltUp}
@@ -159,7 +205,29 @@ class PaginationTable extends Component {
                   <Tds className="py-2"> {data.thumbnail}</Tds>
                   <Tds className="py-2">{data.preview}</Tds>
                   <Tds className="py-2">{data.logs}</Tds>
-                  <Tds className="py-2 ">{data.action}</Tds>
+                  <Tds className="py-2 ">
+                    <Ul className=" m-0 pt-1">
+                      <div>
+                        <input
+                          type="checkbox"
+                          id={data._id}
+                          value={this.state.isChecked}
+                          onChange={this.changeCheckbox}
+                        />
+                      </div>
+
+                      <div>
+                        <ButtonTable>
+                          <FontAwesomeIcon icon={faLayerGroup} />
+                        </ButtonTable>
+                      </div>
+                      <div>
+                        <ButtonTable>
+                          <FontAwesomeIcon icon={faPen} />
+                        </ButtonTable>
+                      </div>
+                    </Ul>
+                  </Tds>
                 </Tr>
               ))}
             </Tbody>
@@ -183,11 +251,12 @@ class PaginationTable extends Component {
 
 const mapStateToProps = state => {
   return {
-    getData: state.getData.data
+    getData: state.getData.data,
+    isChecked: state.getData.isChecked
   };
 };
 
 export default connect(
   mapStateToProps,
-  { fetchData, sortData }
+  { fetchData, sortData, deleteData, changeCheckbox }
 )(PaginationTable);

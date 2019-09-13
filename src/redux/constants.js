@@ -20,3 +20,5 @@ export const FILTER_DATA = "FILTER_DATA";
 export const FILTER_DATA_ALL = "FILTER_DATA_ALL";
 export const SEARCH_DATA = "SEARCH_DATA";
 export const SORT_DATA = "SORT_DATA";
+export const DELETE_DATA = "DELETE_DATA";
+export const ON_CHANGE_CHECKBOX = "ON_CHANGE_CHECKBOX";
