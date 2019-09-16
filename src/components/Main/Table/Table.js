@@ -32,6 +32,7 @@ import Pagination from "../Pagination/Pagination";
 import Calendar from "./Calendar";
 import Filters from "./Filters";
 import Dropdown from "./Dropdown";
+import Checkbox from "./Checkbox";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
@@ -81,8 +82,7 @@ const ButtonTable = styled.button`
 class PaginationTable extends Component {
   state = {
     pageOfItems: [],
-    pageSize: { value: 3 },
-    isChecked: true
+    pageSize: { value: 3 }
   };
 
   componentDidMount() {
@@ -97,10 +97,18 @@ class PaginationTable extends Component {
   handleSelect = e => {
     this.setState({ pageSize: { value: e.target.value } });
   };
-  changeCheckbox = id => {
-    console.log(this.state.isChecked, id.target.id);
-    this.setState({ isChecked: !this.state.isChecked });
-  };
+  // handleChange = e => {
+  //   console.log(this.state.isChecked);
+  //   const item = e.target.name;
+  //   const isChecked = e.target.checked;
+
+  //   this.setState(prevState => ({
+  //     isChecked: prevState.isChecked.set(item, isChecked)
+  //   }));
+  // };
+  // deleteData = () => {
+  //   console.log(this.state.isChecked.get(2));
+  // };
 
   render() {
     return (
@@ -120,7 +128,7 @@ class PaginationTable extends Component {
                 <DropdownMenu right>
                   <DropdownItem>Compose</DropdownItem>
                   <DropdownItem>Combine</DropdownItem>
-                  <DropdownItem onClick={() => this.props.deleteData()}>
+                  <DropdownItem onClick={() => this.deleteData()}>
                     Delete
                   </DropdownItem>
                 </DropdownMenu>
@@ -208,12 +216,13 @@ class PaginationTable extends Component {
                   <Tds className="py-2 ">
                     <Ul className=" m-0 pt-1">
                       <div>
-                        <input
-                          type="checkbox"
-                          id={data._id}
-                          value={this.state.isChecked}
-                          onChange={this.changeCheckbox}
-                        />
+                        <label key={data._id}>
+                          <Checkbox
+                            name={data.name}
+                            checked={this.props.isChecked.get(data.name)}
+                            onChange={this.props.changeCheckbox}
+                          />
+                        </label>
                       </div>
 
                       <div>

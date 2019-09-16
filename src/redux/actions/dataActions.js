@@ -49,6 +49,6 @@ export const deleteData = id => {
 export const changeCheckbox = id => {
   return {
     type: types.ON_CHANGE_CHECKBOX,
-    payload: id
+    payload: data
   };
 };
