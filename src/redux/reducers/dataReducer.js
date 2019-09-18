@@ -6,7 +6,7 @@ const initialState = {
   text: "",
   sortColumn: { path: "title", order: "asc" },
   id: "",
-  isChecked: new Map()
+  isChecked: false
 };
 
 export default function(state = initialState, action) {
@@ -67,12 +67,12 @@ export default function(state = initialState, action) {
             : action.payload.data
       };
     case types.ON_CHANGE_CHECKBOX:
-      const item = state.data[0].name;
-      const isChecked = !state.isChecked;
-      console.log(item);
+      const isChecked = action.checked === "false" ? "true" : "false";
+      console.log(isChecked);
       return {
         ...state,
-        isChecked: state.isChecked.set(item, isChecked)
+        isChecked: isChecked,
+        id: action.id
       };
 
     default:

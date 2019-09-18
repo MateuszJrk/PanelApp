@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { dashboard as dashboardRoutes } from "./index";
 
 import DashboardLayout from "../layouts/Dashboard";
-
+import Login from "../pages/auth/SignIn";
 import ScrollToTop from "../components/ScrollToTop";
 
 const ChildRoutes = ({ layout: Layout, routes }) => (
@@ -41,6 +41,13 @@ const Routes = () => (
         {/* Dashboard routes */}
         <Route
           path="/"
+          exact
+          component={() => (
+            <ChildRoutes layout={Login} routes={dashboardRoutes} />
+          )}
+        />
+        <Route
+          path="/dashboard"
           exact
           component={() => (
             <ChildRoutes layout={DashboardLayout} routes={dashboardRoutes} />

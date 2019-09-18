@@ -82,7 +82,8 @@ const ButtonTable = styled.button`
 class PaginationTable extends Component {
   state = {
     pageOfItems: [],
-    pageSize: { value: 3 }
+    pageSize: { value: 3 },
+    isChecked: false
   };
 
   componentDidMount() {
@@ -97,18 +98,6 @@ class PaginationTable extends Component {
   handleSelect = e => {
     this.setState({ pageSize: { value: e.target.value } });
   };
-  // handleChange = e => {
-  //   console.log(this.state.isChecked);
-  //   const item = e.target.name;
-  //   const isChecked = e.target.checked;
-
-  //   this.setState(prevState => ({
-  //     isChecked: prevState.isChecked.set(item, isChecked)
-  //   }));
-  // };
-  // deleteData = () => {
-  //   console.log(this.state.isChecked.get(2));
-  // };
 
   render() {
     return (
@@ -218,8 +207,9 @@ class PaginationTable extends Component {
                       <div>
                         <label key={data._id}>
                           <Checkbox
+                            id={data._id}
                             name={data.name}
-                            checked={this.props.isChecked.get(data.name)}
+                            checked={this.props.isChecked}
                             onChange={this.props.changeCheckbox}
                           />
                         </label>
