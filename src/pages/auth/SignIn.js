@@ -1,20 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "./Auth";
-import Dashboard from "../../layouts/Dashboard";
 
-import {
-  Button,
-  Card,
-  CardBody,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  CustomInput
-} from "reactstrap";
-
-import avatar from "../../assets/img/avatars/avatar.jpg";
+import { Button, Card, CardBody, Form } from "reactstrap";
 
 const auth = new Auth();
 
@@ -27,47 +15,9 @@ const SignIn = () => (
     <Card>
       <CardBody>
         <div className="m-sm-4">
-          {/* <div className="text-center">
-            <img
-              src={avatar}
-              alt="Chris Wood"
-              className="img-fluid rounded-circle"
-              width="132"
-              height="132"
-            />
-          </div> */}
           <Form>
-            {/* <FormGroup>
-              <Label>Email</Label>
-              <Input
-                bsSize="lg"
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label>Password</Label>
-              <Input
-                bsSize="lg"
-                type="password"
-                name="password"
-                placeholder="Enter your password"
-              />
-              <small>
-                <Link to="/auth/reset-password">Forgot password?</Link>
-              </small>
-            </FormGroup>
-            <div>
-              <CustomInput
-                type="checkbox"
-                id="rememberMe"
-                label="Remember me next time"
-                defaultChecked
-              />
-            </div> */}
             <div className="text-center mt-3">
-              <Link to="/dashboard">
+              <Link to="/main">
                 <Button color="primary" size="lg" onClick={auth.login}>
                   Sign in
                 </Button>

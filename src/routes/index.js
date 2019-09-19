@@ -13,20 +13,7 @@ const dashboardRoutes = {
   name: "Dashboard",
   icon: Folder,
 
-  children: [
-    {
-      path: "/dashboard/default",
-      name: "Test"
-    },
-    {
-      path: "/dashboard/analytics",
-      name: "Test"
-    },
-    {
-      path: "/dashboard/e-commerce",
-      name: "Test"
-    }
-  ]
+  children: []
 };
 
 const pageRoutes = {
@@ -39,6 +26,10 @@ const pageRoutes = {
       name: "Test"
     }
   ]
+};
+const mainRoute = {
+  path: "/main",
+  name: "Main"
 };
 
 // const layoutRoutes = {
@@ -80,7 +71,7 @@ const pageRoutes = {
 // };
 
 // Dashboard specific routes
-export const dashboard = [dashboardRoutes, pageRoutes];
+export const dashboard = [dashboardRoutes, pageRoutes, mainRoute];
 
 // Landing specific routes
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import Auth from "../../pages/auth/Auth";
 import { toggleSidebar } from "../../redux/actions/sidebarActions";
 import { searchData } from "../../redux/actions/dataActions";
 
@@ -20,6 +20,8 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { PieChart, Settings, User } from "react-feather";
 import ServerStatus from "./ServerStatus";
 import avatar1 from "../../assets/img/avatars/avatar.jpg";
+
+const auth = new Auth();
 
 class NavbarComponent extends React.Component {
   render() {
@@ -94,7 +96,7 @@ class NavbarComponent extends React.Component {
                   <DropdownItem divider />
                   <DropdownItem>Settings & Privacy</DropdownItem>
                   <DropdownItem>Help</DropdownItem>
-                  <DropdownItem>Sign out</DropdownItem>
+                  <DropdownItem onClick={auth.logout}>Sign out</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

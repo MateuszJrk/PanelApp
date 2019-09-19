@@ -47,7 +47,7 @@ const Routes = () => (
           )}
         />
         <Route
-          path="/dashboard"
+          path="/main"
           exact
           component={() => (
             <ChildRoutes layout={DashboardLayout} routes={dashboardRoutes} />
