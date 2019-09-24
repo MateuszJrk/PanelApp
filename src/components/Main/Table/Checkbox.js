@@ -4,14 +4,14 @@ const Checkbox = ({
   id,
   type = "checkbox",
   name,
-  checked = "false",
+  checked = false,
   onChange
 }) => (
   <input
     id={id}
     type={type}
-    name={name}
     checked={checked}
+    name={name}
     onChange={onChange}
   />
 );
