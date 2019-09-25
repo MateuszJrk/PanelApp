@@ -69,6 +69,7 @@
     "react-transition-group": "2.8.0",
     "reactstrap": "7.1.0",
     "redux": "4.0.1",
+    "redux-form": "^8.2.6",
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.3.1"
   },

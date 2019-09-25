@@ -6,7 +6,6 @@ import ReactTooltip from "react-tooltip";
 import {
   fetchData,
   sortData,
-  deleteData,
   changeCheckbox
 } from "../../../redux/actions/dataActions";
 
@@ -103,8 +102,7 @@ const ImgModal = styled.img`
 class PaginationTable extends Component {
   state = {
     pageOfItems: [],
-    pageSize: { value: 10 },
-    checkedItems: new Map()
+    pageSize: { value: 10 }
   };
 
   componentDidMount() {
@@ -118,25 +116,6 @@ class PaginationTable extends Component {
   };
   handleSelect = e => {
     this.setState({ pageSize: { value: e.target.value } });
-  };
-
-  handleChange = e => {
-    const item = e.target.name;
-    const isChecked = e.target.checked;
-
-    this.setState(prevState => ({
-      checkedItems: prevState.checkedItems.set(item, isChecked)
-    }));
-    console.log(this.state.checkedItems);
-  };
-  // handleChange = e => {
-  //   const id = e.target.id;
-  //   const test = this.state.isChecked;
-  //   this.setState(prevState => ({ isChecked: !prevState.isChecked }));
-  //   console.log(test);
-  // };
-  deleteData = () => {
-    console.log(this.state.checkedItems);
   };
 
   render() {
@@ -157,7 +136,7 @@ class PaginationTable extends Component {
                 <DropdownMenu right>
                   <DropdownItem>Compose</DropdownItem>
                   <DropdownItem>Combine</DropdownItem>
-                  <DropdownItem onClick={() => this.deleteData()}>
+                  <DropdownItem onClick={() => this.handleDelete()}>
                     Delete
                   </DropdownItem>
                 </DropdownMenu>
@@ -386,12 +365,7 @@ class PaginationTable extends Component {
                     <Ul className=" m-0 pt-1">
                       <div>
                         <label key={data._id}>
-                          <Checkbox
-                            id={data._id}
-                            name={data.name}
-                            checked={this.state.checkedItems.get(data.name)}
-                            onChange={this.handleChange}
-                          />
+                          <Checkbox id={data._id} name={data.name} />
                         </label>
                       </div>
 
@@ -437,5 +411,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchData, sortData, deleteData, changeCheckbox }
+  { fetchData, sortData, changeCheckbox }
 )(PaginationTable);

@@ -1,19 +1,24 @@
 import React from "react";
 
+import { Field, reduxForm } from "redux-form";
+
 const Checkbox = ({
   id,
-  type = "checkbox",
+
   name,
   checked = false,
   onChange
 }) => (
-  <input
+  <Field
     id={id}
-    type={type}
     checked={checked}
     name={name}
     onChange={onChange}
+    component="input"
+    type="checkbox"
   />
 );
 
-export default Checkbox;
+export default reduxForm({
+  form: "simple"
+})(Checkbox);
