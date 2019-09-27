@@ -6,7 +6,7 @@ import ReactTooltip from "react-tooltip";
 import {
   fetchData,
   sortData,
-  changeCheckbox
+  deleteData
 } from "../../../redux/actions/dataActions";
 
 import {
@@ -136,7 +136,11 @@ class PaginationTable extends Component {
                 <DropdownMenu right>
                   <DropdownItem>Compose</DropdownItem>
                   <DropdownItem>Combine</DropdownItem>
-                  <DropdownItem onClick={() => this.handleDelete()}>
+                  <DropdownItem
+                    onClick={() => {
+                      return console.log(this.props);
+                    }}
+                  >
                     Delete
                   </DropdownItem>
                 </DropdownMenu>
@@ -365,7 +369,7 @@ class PaginationTable extends Component {
                     <Ul className=" m-0 pt-1">
                       <div>
                         <label key={data._id}>
-                          <Checkbox id={data._id} name={data.name} />
+                          <Checkbox id={data._id} />
                         </label>
                       </div>
 
@@ -405,11 +409,11 @@ class PaginationTable extends Component {
 const mapStateToProps = state => {
   return {
     getData: state.getData.data,
-    isChecked: state.getData.isChecked
+    checked: state.getData.isChecked
   };
 };
 
 export default connect(
   mapStateToProps,
-  { fetchData, sortData, changeCheckbox }
+  { fetchData, sortData, deleteData }
 )(PaginationTable);

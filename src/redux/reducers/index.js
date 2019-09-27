@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import { reducer as formReducer } from "redux-form";
 
 import sidebar from "./sidebarReducers";
 import layout from "./layoutReducer";
@@ -12,5 +13,6 @@ export default combineReducers({
   layout,
   theme,
   toastr,
-  getData: data
+  getData: data,
+  form: formReducer
 });

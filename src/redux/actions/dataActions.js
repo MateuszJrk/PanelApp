@@ -42,15 +42,6 @@ export const sortData = (path = "") => {
 export const deleteData = id => {
   return {
     type: types.DELETE_DATA,
-    payload: { data, id },
-    id
-  };
-};
-export const changeCheckbox = id => {
-  return {
-    type: types.ON_CHANGE_CHECKBOX,
-    payload: data,
-    id: id.target.id,
-    checked: id.checked
+    payload: id
   };
 };

@@ -5,8 +5,7 @@ const initialState = {
   data: [],
   text: "",
   sortColumn: { path: "title", order: "asc" },
-  id: "",
-  isChecked: false
+  isChecked: "false"
 };
 
 export default function(state = initialState, action) {
@@ -55,24 +54,10 @@ export default function(state = initialState, action) {
         data: _.orderBy(sorted, state.sortColumn.path, state.sortColumn.order)
       };
     case types.DELETE_DATA:
-      console.log(action.payload.data);
       return {
         ...state,
-        id: state.isChecked,
-        data:
-          state.isChecked === "true"
-            ? action.payload.data.filter(obj => {
-                return obj;
-              })
-            : action.payload.data
-      };
-    case types.ON_CHANGE_CHECKBOX:
-      const isChecked = action.checked === "false" ? "true" : "false";
-      console.log(isChecked);
-      return {
-        ...state,
-        isChecked: isChecked,
-        id: action.id
+        id: action.id,
+        data: state.data.filter(({ _id }) => _id !== action._id)
       };
 
     default:
