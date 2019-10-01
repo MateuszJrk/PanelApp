@@ -20,7 +20,7 @@ class PaginationMenu extends React.Component {
 
   componentDidMount() {
     // set page if items array isn't empty
-    if (this.props.getData && this.props.getData.length) {
+    if (this.props.data && this.props.data.length) {
       this.setPage(this.props.initialPage);
     }
   }
@@ -28,7 +28,7 @@ class PaginationMenu extends React.Component {
   componentDidUpdate(prevProps) {
     // reset page if items array has changed
     if (
-      this.props.getData !== prevProps.getData ||
+      this.props.data !== prevProps.data ||
       this.props.pageSize !== prevProps.pageSize
     ) {
       this.setPage(this.props.initialPage);
@@ -51,7 +51,7 @@ class PaginationMenu extends React.Component {
   };
 
   setPage(page) {
-    const items = this.props.getData;
+    const items = this.props.data;
 
     let pager = this.state.pager;
 
@@ -188,7 +188,7 @@ PaginationMenu.defaultProps = defaultProps;
 
 const mapStateToProps = state => {
   return {
-    getData: state.getData.data
+    data: state.data.data
   };
 };
 

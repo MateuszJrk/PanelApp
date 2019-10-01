@@ -111,7 +111,7 @@ class PaginationTable extends Component {
 
   onChangePage = pageOfItems => {
     //   update state with new page of items
-    console.log(this.props.getData);
+
     this.setState({ pageOfItems });
   };
   handleSelect = e => {
@@ -406,14 +406,7 @@ class PaginationTable extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    getData: state.getData.data,
-    checked: state.getData.isChecked
-  };
-};
-
 export default connect(
-  mapStateToProps,
+  null,
   { fetchData, sortData, deleteData }
 )(PaginationTable);

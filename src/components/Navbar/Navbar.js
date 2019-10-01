@@ -108,8 +108,7 @@ class NavbarComponent extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
-  return { getData: state.getData.data, filter: state.getData.text };
+  return { data: state.data.data, filter: state.data.text };
 };
 
 export default connect(

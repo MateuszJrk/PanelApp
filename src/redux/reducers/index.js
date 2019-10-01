@@ -13,6 +13,6 @@ export default combineReducers({
   layout,
   theme,
   toastr,
-  getData: data,
+  data,
   form: formReducer
 });

@@ -4,8 +4,7 @@ import _ from "lodash";
 const initialState = {
   data: [],
   text: "",
-  sortColumn: { path: "title", order: "asc" },
-  isChecked: "false"
+  sortColumn: { path: "title", order: "asc" }
 };
 
 export default function(state = initialState, action) {

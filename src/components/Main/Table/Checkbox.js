@@ -7,6 +7,7 @@ class Checkbox extends React.Component {
     return <input {...input} type="checkbox" />;
   }
   render() {
+    console.log(this.props);
     return (
       <Field
         id={this.props.id}
