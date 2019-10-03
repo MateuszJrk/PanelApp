@@ -42,6 +42,15 @@ export const sortData = (path = "") => {
 export const deleteData = id => {
   return {
     type: types.DELETE_DATA,
-    payload: id
+    payload: data,
+    id
+  };
+};
+export const onChange = (value = "", id) => {
+  return {
+    type: types.ON_CHANGE,
+    payload: data,
+    value,
+    id
   };
 };

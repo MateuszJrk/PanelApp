@@ -4,7 +4,8 @@ import _ from "lodash";
 const initialState = {
   data: [],
   text: "",
-  sortColumn: { path: "title", order: "asc" }
+  sortColumn: { path: "title", order: "asc" },
+  value: false
 };
 
 export default function(state = initialState, action) {
@@ -51,6 +52,15 @@ export default function(state = initialState, action) {
       return {
         ...state,
         data: _.orderBy(sorted, state.sortColumn.path, state.sortColumn.order)
+      };
+    case types.ON_CHANGE:
+      console.log(state.id);
+      return {
+        ...state,
+        value: action.value === "false" ? "true" : "false",
+        id: action.payload.map(id => {
+          return id._id;
+        })
       };
     case types.DELETE_DATA:
       return {

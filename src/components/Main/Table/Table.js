@@ -6,7 +6,8 @@ import ReactTooltip from "react-tooltip";
 import {
   fetchData,
   sortData,
-  deleteData
+  deleteData,
+  onChange
 } from "../../../redux/actions/dataActions";
 
 import {
@@ -41,7 +42,7 @@ import Pagination from "../Pagination/Pagination";
 import Calendar from "./Calendar";
 import Filters from "./Filters";
 import Dropdown from "./Dropdown";
-import Checkbox from "./Checkbox";
+// import Checkbox from "./Checkbox";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
@@ -369,7 +370,14 @@ class PaginationTable extends Component {
                     <Ul className=" m-0 pt-1">
                       <div>
                         <label key={data._id}>
-                          <Checkbox id={data._id} />
+                          <input
+                            type="checkbox"
+                            value={this.props.value}
+                            onChange={e => {
+                              this.props.onChange(e.target.value);
+                            }}
+                          />
+                          {/* <Checkbox input={data} /> */}
                         </label>
                       </div>
 
@@ -406,7 +414,12 @@ class PaginationTable extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  console.log(state.data.value);
+  return { value: state.data.value };
+};
+
 export default connect(
-  null,
-  { fetchData, sortData, deleteData }
+  mapStateToProps,
+  { fetchData, sortData, deleteData, onChange }
 )(PaginationTable);
