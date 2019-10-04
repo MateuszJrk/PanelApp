@@ -137,11 +137,7 @@ class PaginationTable extends Component {
                 <DropdownMenu right>
                   <DropdownItem>Compose</DropdownItem>
                   <DropdownItem>Combine</DropdownItem>
-                  <DropdownItem
-                    onClick={() => {
-                      return console.log(this.props);
-                    }}
-                  >
+                  <DropdownItem onClick={() => this.props.deleteData()}>
                     Delete
                   </DropdownItem>
                 </DropdownMenu>
@@ -374,7 +370,11 @@ class PaginationTable extends Component {
                             type="checkbox"
                             value={this.props.value}
                             onChange={e => {
-                              this.props.onChange(e.target.value);
+                              this.props.onChange(
+                                e.target.value,
+                                data._id,
+                                data.name
+                              );
                             }}
                           />
                           {/* <Checkbox input={data} /> */}

@@ -4,8 +4,10 @@ import _ from "lodash";
 const initialState = {
   data: [],
   text: "",
+  name: "",
   sortColumn: { path: "title", order: "asc" },
-  value: false
+  value: false,
+  isChecked: []
 };
 
 export default function(state = initialState, action) {
@@ -54,19 +56,20 @@ export default function(state = initialState, action) {
         data: _.orderBy(sorted, state.sortColumn.path, state.sortColumn.order)
       };
     case types.ON_CHANGE:
-      console.log(state.id);
+      // console.log(state.isChecked);
       return {
         ...state,
         value: action.value === "false" ? "true" : "false",
-        id: action.payload.map(id => {
-          return id._id;
-        })
+        id: action.id,
+        isChecked: [...state.isChecked, action.id],
+        name: action.name
       };
     case types.DELETE_DATA:
+      console.log(state.isChecked);
       return {
         ...state,
-        id: action.id,
-        data: state.data.filter(({ _id }) => _id !== action._id)
+        id: action.id
+        // data: state.data.filter(({ _id }) => _id !== action._id)
       };
 
     default:

@@ -46,11 +46,11 @@ export const deleteData = id => {
     id
   };
 };
-export const onChange = (value = "", id) => {
+export const onChange = (value = "", id, name = "") => {
   return {
     type: types.ON_CHANGE,
-    payload: data,
     value,
-    id
+    id,
+    name
   };
 };
