@@ -308,6 +308,7 @@ class PaginationTable extends Component {
                           className="cursor-pointer"
                           data-toggle="modal"
                           data-target="#exampleModal"
+                          SameSite="None"
                         />
                         <div
                           className="modal fade"
@@ -325,6 +326,7 @@ class PaginationTable extends Component {
                               <ImgModal
                                 src="https://www.imgacademy.com/sites/default/files/legacy-hotel-rendering-guest-room.jpg"
                                 alt="room"
+                                SameSite="None"
                               />
                             </div>
                           </div>
@@ -370,11 +372,7 @@ class PaginationTable extends Component {
                             type="checkbox"
                             value={this.props.value}
                             onChange={e => {
-                              this.props.onChange(
-                                e.target.value,
-                                data._id,
-                                data.name
-                              );
+                              this.props.onChange(e.target.value, data._id);
                             }}
                           />
                           {/* <Checkbox input={data} /> */}
@@ -415,7 +413,6 @@ class PaginationTable extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state.data.value);
   return { value: state.data.value };
 };
 

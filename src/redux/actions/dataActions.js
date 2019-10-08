@@ -39,18 +39,16 @@ export const sortData = (path = "") => {
     path
   };
 };
-export const deleteData = id => {
+export const deleteData = () => {
   return {
     type: types.DELETE_DATA,
-    payload: data,
-    id
+    payload: data
   };
 };
-export const onChange = (value = "", id, name = "") => {
+export const onChange = (value = "", id) => {
   return {
     type: types.ON_CHANGE,
     value,
-    id,
-    name
+    id
   };
 };
