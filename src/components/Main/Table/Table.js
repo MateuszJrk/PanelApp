@@ -42,7 +42,6 @@ import Pagination from "../Pagination/Pagination";
 import Calendar from "./Calendar";
 import Filters from "./Filters";
 import Dropdown from "./Dropdown";
-// import Checkbox from "./Checkbox";
 import styled from "styled-components";
 import { Table, Thead, Tbody } from "react-super-responsive-table";
 import "./SuperResponsiveTableStyl.css";
@@ -370,9 +369,8 @@ class PaginationTable extends Component {
                         <label key={data._id}>
                           <input
                             type="checkbox"
-                            value={this.props.value}
                             onChange={e => {
-                              this.props.onChange(e.target.value, data._id);
+                              this.props.onChange(data._id);
                             }}
                           />
                           {/* <Checkbox input={data} /> */}
@@ -412,11 +410,7 @@ class PaginationTable extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return { value: state.data.value };
-};
-
 export default connect(
-  mapStateToProps,
+  null,
   { fetchData, sortData, deleteData, onChange }
 )(PaginationTable);

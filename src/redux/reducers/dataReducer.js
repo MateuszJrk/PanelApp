@@ -4,9 +4,7 @@ import _ from "lodash";
 const initialState = {
   data: [],
   text: "",
-
   sortColumn: { path: "title", order: "asc" },
-  value: false,
   isChecked: []
 };
 
@@ -56,31 +54,23 @@ export default function(state = initialState, action) {
         data: _.orderBy(sorted, state.sortColumn.path, state.sortColumn.order)
       };
     case types.ON_CHANGE:
-      // console.log(state.isChecked);
+      return {
+        ...state,
+        isChecked: state.isChecked.includes(action.id)
+          ? [...state.isChecked].filter(el => el !== action.id)
+          : [...state.isChecked, action.id]
+      };
+    case types.DELETE_DATA:
+      let isChecked = state.isChecked;
+      let dataArray = state.data.map(el => el._id);
+      let filteredArray = [];
+      filteredArray = _.difference(dataArray, isChecked);
 
       return {
         ...state,
-        value: action.value === "false" ? "true" : "false",
-        id: action.id,
-        isChecked: state.isChecked.includes(action.id)
-          ? [...state.isChecked].filter(el => el !== action.id)
-          : [...state.isChecked, action.id],
-        name: action.name
-      };
-    case types.DELETE_DATA:
-      console.log(state.isChecked);
-      return {
-        ...state
-        // data:
-        //   state.isChecked.length > 0
-        //     ? action.payload.map(obj => {
-        //         return state.isChecked.includes(obj._id)
-        //           ? action.payload.filter(
-        //               el => el._id !== state.isChecked.map(el._id)
-        //             )
-        //           : action.payload;
-        //       })
-        //     : action.payload
+        data: action.payload.filter(el => {
+          return filteredArray.includes(el._id);
+        })
       };
 
     default:
