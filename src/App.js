@@ -1,3 +1,5 @@
+/* eslint no-restricted-globals: 0 */
+
 import React from "react";
 import { Provider } from "react-redux";
 import ReduxToastr from "react-redux-toastr";

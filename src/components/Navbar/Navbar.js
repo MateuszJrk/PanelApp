@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Auth from "../../pages/auth/Auth";
+// import { useAuth0 } from "../../pages/auth/react-auth0-spa";
 import { toggleSidebar } from "../../redux/actions/sidebarActions";
 import { searchData } from "../../redux/actions/dataActions";
 
@@ -22,6 +23,7 @@ import ServerStatus from "./ServerStatus";
 import avatar1 from "../../assets/img/avatars/avatar.jpg";
 
 const auth = new Auth();
+// const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
 class NavbarComponent extends React.Component {
   render() {
@@ -96,7 +98,20 @@ class NavbarComponent extends React.Component {
                   <DropdownItem divider />
                   <DropdownItem>Settings & Privacy</DropdownItem>
                   <DropdownItem>Help</DropdownItem>
-                  <DropdownItem onClick={auth.logout}>Sign out</DropdownItem>
+                  <DropdownItem onClick={auth.logout}>
+                    {/* <div>
+                      {!isAuthenticated && (
+                        <button onClick={() => loginWithRedirect({})}>
+                          Log in
+                        </button>
+                      )}
+
+                      {isAuthenticated && (
+                        <button onClick={() => logout()}>Log out</button>
+                      )}
+                    </div> */}
+                    Sign out
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

@@ -12,21 +12,33 @@ import Table from "../components/Main/Table/Table";
 
 import Settings from "../components/Settings";
 
-const Dashboard = () => (
-  <React.Fragment>
-    <Wrapper>
-      <Sidebar />
-      <Main>
-        <Navbar />
-        <Content>
-          <Statistics />
-          <Table />
-        </Content>
-        <Footer />
-        <Settings />
-      </Main>
-    </Wrapper>
-  </React.Fragment>
-);
+import Auth from "../pages/auth/Auth";
+
+const auth = new Auth();
+
+class Dashboard extends React.Component {
+  componentDidMount() {
+    auth.handleAuthentication();
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Wrapper>
+          <Sidebar />
+          <Main>
+            <Navbar />
+            <Content>
+              <Statistics />
+              <Table />
+            </Content>
+            <Footer />
+            <Settings />
+          </Main>
+        </Wrapper>
+      </React.Fragment>
+    );
+  }
+}
 
 export default Dashboard;
