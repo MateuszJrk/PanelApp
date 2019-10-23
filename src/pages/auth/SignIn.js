@@ -1,33 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Auth from "./Auth";
-
+// import { Link } from "react-router-dom";
+import { useAuth0 } from "./react-auth0-spa";
 import { Button, Card, CardBody, Form } from "reactstrap";
 
-const auth = new Auth();
+const SignIn = () => {
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
-const SignIn = () => (
-  <React.Fragment>
-    <div className="text-center mt-4">
-      <p className="lead">Sign in to your account to continue</p>
-    </div>
+  return (
+    <React.Fragment>
+      <div className="text-center mt-4">
+        <p className="lead">Sign in to your account to continue</p>
+      </div>
 
-    <Card>
-      <CardBody>
-        <div className="m-sm-4">
-          <Form>
-            <div className="text-center mt-3">
-              <Link to="/main">
-                <Button color="primary" size="lg" onClick={auth.login}>
-                  Sign in
-                </Button>
-              </Link>
-            </div>
-          </Form>
-        </div>
-      </CardBody>
-    </Card>
-  </React.Fragment>
-);
+      <Card>
+        <CardBody>
+          <div className="m-sm-4">
+            <Form>
+              <div className="text-center mt-3">
+                {!isAuthenticated && (
+                  <Button onClick={() => loginWithRedirect({})}>Log in</Button>
+                )}
+
+                {isAuthenticated && (
+                  <Button onClick={() => logout()}>Log out</Button>
+                )}
+              </div>
+            </Form>
+          </div>
+        </CardBody>
+      </Card>
+    </React.Fragment>
+  );
+};
 
 export default SignIn;

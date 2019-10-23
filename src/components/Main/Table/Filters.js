@@ -65,4 +65,8 @@ const Filters = props => {
   );
 };
 
-export default connect()(Filters);
+const mapStateToProps = state => {
+  return { data: state.data.data, filter: state.data.text };
+};
+
+export default connect(mapStateToProps)(Filters);

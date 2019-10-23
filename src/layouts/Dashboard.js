@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import Wrapper from "../components/Wrapper";
 import Sidebar from "../components/Sidebar/Sidebar";
@@ -12,22 +13,14 @@ import Table from "../components/Main/Table/Table";
 
 import Settings from "../components/Settings";
 
-import Auth from "../pages/auth/Auth";
-
-const auth = new Auth();
-
 class Dashboard extends React.Component {
-  componentDidMount() {
-    auth.handleAuthentication();
-  }
-
   render() {
     return (
       <React.Fragment>
         <Wrapper>
           <Sidebar />
           <Main>
-            <Navbar />
+            <Navbar test={this.props.data} />
             <Content>
               <Statistics />
               <Table />
@@ -41,4 +34,12 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+const mapStateToProps = state => {
+  console.log(state.data);
+  return { data: state.data };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(Dashboard);
