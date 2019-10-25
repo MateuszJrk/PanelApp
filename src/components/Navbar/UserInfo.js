@@ -8,16 +8,14 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ServerStatus from "./ServerStatus";
 import avatar1 from "../../assets/img/avatars/avatar.jpg";
 import { PieChart, Settings, User } from "react-feather";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
-import { useAuth0 } from "../../pages/auth/react-auth0-spa";
-
 const UserInfo = () => {
-  const { isAuthenticated, logout } = useAuth0();
   return (
     <Collapse navbar>
       <Nav className="ml-auto" navbar>
@@ -65,9 +63,22 @@ const UserInfo = () => {
             <DropdownItem>Settings & Privacy</DropdownItem>
             <DropdownItem>Help</DropdownItem>
 
-            <DropdownItem onClick={() => (isAuthenticated ? logout() : null)}>
-              Log out
-            </DropdownItem>
+            <DropdownItem>Log out</DropdownItem>
+            {/* <div>
+              {!isAuthenticated && (
+                <button onClick={() => loginWithRedirect({})}>Log in</button>
+              )}
+
+              {isAuthenticated && (
+                <button onClick={() => logout()}>Log out</button>
+              )}
+              {isAuthenticated && (
+                <span>
+                  <Link to="/">Home</Link>&nbsp;
+                  <Link to="/profile">Profile</Link>
+                </span>
+              )}
+            </div> */}
           </DropdownMenu>
         </UncontrolledDropdown>
       </Nav>

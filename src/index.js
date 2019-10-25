@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-
-import { Auth0Provider } from "./pages/auth/react-auth0-spa";
+import { Auth0Provider } from "./pages/auth/React-auth0-spa";
 import config from "./pages/auth/auth_config.json";
 
 // A function that routes the user to the right place

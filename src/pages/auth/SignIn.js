@@ -1,36 +1,105 @@
-import React from "react";
+// import React from "react";
 // import { Link } from "react-router-dom";
-import { useAuth0 } from "./react-auth0-spa";
-import { Button, Card, CardBody, Form } from "reactstrap";
 
-const SignIn = () => {
+// import {
+//   Button,
+//   Card,
+//   CardBody,
+//   Form,
+//   FormGroup,
+//   Label,
+//   Input,
+//   CustomInput
+// } from "reactstrap";
+
+// import avatar from "../../assets/img/avatars/avatar.jpg";
+
+// const SignIn = () => (
+//   <React.Fragment>
+//     <div className="text-center mt-4">
+//       <h2>Welcome back, Chris</h2>
+//       <p className="lead">Sign in to your account to continue</p>
+//     </div>
+
+//     <Card>
+//       <CardBody>
+//         <div className="m-sm-4">
+//           <div className="text-center">
+//             <img
+//               src={avatar}
+//               alt="Chris Wood"
+//               className="img-fluid rounded-circle"
+//               width="132"
+//               height="132"
+//             />
+//           </div>
+//           <Form>
+//             <FormGroup>
+//               <Label>Email</Label>
+//               <Input
+//                 bsSize="lg"
+//                 type="email"
+//                 name="email"
+//                 placeholder="Enter your email"
+//               />
+//             </FormGroup>
+//             <FormGroup>
+//               <Label>Password</Label>
+//               <Input
+//                 bsSize="lg"
+//                 type="password"
+//                 name="password"
+//                 placeholder="Enter your password"
+//               />
+//               <small>
+//                 <Link to="/auth/reset-password">Forgot password?</Link>
+//               </small>
+//             </FormGroup>
+//             <div>
+//               <CustomInput
+//                 type="checkbox"
+//                 id="rememberMe"
+//                 label="Remember me next time"
+//                 defaultChecked
+//               />
+//             </div>
+//             <div className="text-center mt-3">
+//               <Link to="/dashboard/default">
+//                 <Button color="primary" size="lg">
+//                   Sign in
+//                 </Button>
+//               </Link>
+//             </div>
+//           </Form>
+//         </div>
+//       </CardBody>
+//     </Card>
+//   </React.Fragment>
+// );
+
+// export default SignIn;
+import React from "react";
+import { useAuth0 } from "./React-auth0-spa";
+import { Link } from "react-router-dom";
+
+const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
-    <React.Fragment>
-      <div className="text-center mt-4">
-        <p className="lead">Sign in to your account to continue</p>
-      </div>
+    <div>
+      {!isAuthenticated && (
+        <button onClick={() => loginWithRedirect({})}>Log in</button>
+      )}
 
-      <Card>
-        <CardBody>
-          <div className="m-sm-4">
-            <Form>
-              <div className="text-center mt-3">
-                {!isAuthenticated && (
-                  <Button onClick={() => loginWithRedirect({})}>Log in</Button>
-                )}
-
-                {isAuthenticated && (
-                  <Button onClick={() => logout()}>Log out</Button>
-                )}
-              </div>
-            </Form>
-          </div>
-        </CardBody>
-      </Card>
-    </React.Fragment>
+      {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+      {isAuthenticated && (
+        <span>
+          <Link to="/">Home</Link>&nbsp;
+          <Link to="/profile">Profile</Link>
+        </span>
+      )}
+    </div>
   );
 };
 
-export default SignIn;
+export default NavBar;
