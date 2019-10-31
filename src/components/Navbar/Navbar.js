@@ -13,7 +13,6 @@ class NavbarComponent extends React.Component {
           <span
             className="sidebar-toggle d-flex mr-2"
             onClick={() => {
-              console.log(this.props.test.text);
               this.props.toggleSidebar();
             }}
           >
@@ -26,7 +25,7 @@ class NavbarComponent extends React.Component {
               placeholder="Search ..."
               aria-label="Search"
               className="form-control-no-border mr-sm-2"
-              value={this.props.test.text}
+              value={this.props.filter}
               onChange={e => {
                 this.props.searchData(e.target.value);
               }}

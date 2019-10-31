@@ -8,6 +8,8 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import { Link } from "react-router-dom";
+import isAuthenticated from "../../pages/auth/isAuthenticated";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ServerStatus from "./ServerStatus";
@@ -63,22 +65,13 @@ const UserInfo = () => {
             <DropdownItem>Settings & Privacy</DropdownItem>
             <DropdownItem>Help</DropdownItem>
 
-            <DropdownItem>Log out</DropdownItem>
-            {/* <div>
-              {!isAuthenticated && (
-                <button onClick={() => loginWithRedirect({})}>Log in</button>
+            <DropdownItem>
+              {isAuthenticated() && (
+                <Link to="/logout" style={{ color: "#495057" }}>
+                  Logout
+                </Link>
               )}
-
-              {isAuthenticated && (
-                <button onClick={() => logout()}>Log out</button>
-              )}
-              {isAuthenticated && (
-                <span>
-                  <Link to="/">Home</Link>&nbsp;
-                  <Link to="/profile">Profile</Link>
-                </span>
-              )}
-            </div> */}
+            </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
       </Nav>

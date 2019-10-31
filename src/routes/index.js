@@ -9,11 +9,16 @@ import { Folder, Home } from "react-feather";
 // Routes
 
 const dashboardRoutes = {
-  path: "/main",
+  path: "/pages",
   name: "Dashboard",
   icon: Folder,
 
-  children: []
+  children: [
+    {
+      path: "/pages/profile",
+      name: "Test"
+    }
+  ]
 };
 
 const pageRoutes = {
