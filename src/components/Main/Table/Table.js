@@ -200,7 +200,7 @@ class PaginationTable extends Component {
             </Thead>
             <Tbody>
               {this.state.pageOfItems.map(data => (
-                <Tr key={data._id} className="py-4">
+                <Tr key={data.modification_timestamp} className="py-4">
                   <Tds>
                     <h4>
                       <Badge color={data.type === "2D" ? "primary" : "warning"}>
@@ -215,7 +215,9 @@ class PaginationTable extends Component {
                   </Tds>
 
                   <Tds className="py-2">{data.date}</Tds>
-                  <Tds className="py-2">{data.size}</Tds>
+                  <Tds className="py-2">
+                    {(data.size / 10000000).toFixed(0)} MB
+                  </Tds>
                   <Tds className="py-2">
                     <Ul className="m-0">
                       <div>

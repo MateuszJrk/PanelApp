@@ -1,8 +1,6 @@
 import * as types from "../constants";
-import getData from "../../components/Data";
 
-const data = getData();
-
+const data = require("../../components/packages_50.json");
 export const fetchData = () => {
   return {
     type: types.GET_DATA,
