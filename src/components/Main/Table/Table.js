@@ -90,14 +90,14 @@ const ButtonTable = styled.button`
 const P = styled.p`
   margin: 0px;
 `;
-const ImgTable = styled.img`
-  width: 90px;
-  height: 60px;
-`;
-const ImgModal = styled.img`
-  width: 100%;
-  height: 400px;
-`;
+// const ImgTable = styled.img`
+//   width: 90px;
+//   height: 60px;
+// `;
+// const ImgModal = styled.img`
+//   width: 100%;
+//   height: 400px;
+// `;
 
 class PaginationTable extends Component {
   state = {
@@ -147,7 +147,20 @@ class PaginationTable extends Component {
           <Table>
             <Thead>
               <Tr className="border-0">
-                <Ths>Type</Ths>
+                <Ths
+                  onClick={() => this.props.sortData("type")}
+                  className="cursor-pointer"
+                >
+                  Type
+                  <FontAwesomeIcon
+                    icon={faLongArrowAltUp}
+                    className=" text-muted"
+                  />
+                  <FontAwesomeIcon
+                    icon={faLongArrowAltDown}
+                    className=" text-muted"
+                  />
+                </Ths>
                 <Ths
                   name="Name"
                   onClick={() => this.props.sortData("name")}
@@ -193,7 +206,7 @@ class PaginationTable extends Component {
                 </Ths>
                 <Ths>Status</Ths>
                 <Ths>Result</Ths>
-                <Ths>Thumbnail</Ths>
+                {/* <Ths>Thumbnail</Ths> */}
                 <Ths>Preview</Ths>
                 <Ths>Logs</Ths>
               </Tr>
@@ -210,8 +223,16 @@ class PaginationTable extends Component {
                   </Tds>
                   <Tds className="py-2">
                     <small>
-                      <p className="p-2 m-0">{data.name}</p>
+                      <p className="p-2 m-0">
+                        <a
+                          className="text-secondary"
+                          href={`http://q00.pl/cubemapcomposer360/build/examples/demo.html#${data.name}`}
+                        >
+                          {data.path}
+                        </a>
+                      </p>
                     </small>
+                    <p className="p-2 m-0 text-dark">{data.name}</p>
                   </Tds>
 
                   <Tds className="py-2">{data.date}</Tds>
@@ -299,7 +320,7 @@ class PaginationTable extends Component {
                       </li>
                     </ul>
                   </Tds>
-                  <Tds className="py-2">
+                  {/* <Tds className="py-2">
                     <ul className="list-inline d-flex justify-content-around m-0 p-0s">
                       <li>
                         <ImgTable
@@ -334,7 +355,7 @@ class PaginationTable extends Component {
                         </div>
                       </li>
                     </ul>
-                  </Tds>
+                  </Tds> */}
                   <Tds className="py-2">
                     <ul className="list-inline d-flex justify-content-around m-0 p-0s">
                       <li>
@@ -368,14 +389,13 @@ class PaginationTable extends Component {
                   <Tds className="py-2 ">
                     <Ul className=" m-0 pt-1">
                       <div>
-                        <label key={data._id}>
+                        <label key={data.modification_timestamp}>
                           <input
                             type="checkbox"
                             onChange={e => {
-                              this.props.onChange(data._id);
+                              this.props.onChange(data.modification_timestamp);
                             }}
                           />
-                          {/* <Checkbox input={data} /> */}
                         </label>
                       </div>
 

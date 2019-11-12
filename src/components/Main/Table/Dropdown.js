@@ -19,7 +19,8 @@ const Select = styled.select`
     color: white;
   }
   @media screen and (max-width: 40em) {
-    font-size: 20px;
+    font-size: 15px;
+    width: 45px;
   }
 `;
 

@@ -34,7 +34,7 @@ export default function(state = initialState, action) {
         text: action.text,
         data: action.text
           ? action.payload.filter(obj => {
-              return obj.name.toLowerCase().includes(action.text.toLowerCase());
+              return obj.name.includes(action.text);
             })
           : action.payload
       };
@@ -62,14 +62,14 @@ export default function(state = initialState, action) {
       };
     case types.DELETE_DATA:
       let isChecked = state.isChecked;
-      let dataArray = state.data.map(el => el._id);
+      let dataArray = state.data.map(el => el.modification_timestamp);
       let filteredArray = [];
       filteredArray = _.difference(dataArray, isChecked);
 
       return {
         ...state,
         data: action.payload.filter(el => {
-          return filteredArray.includes(el._id);
+          return filteredArray.includes(el.modification_timestamp);
         })
       };
 
