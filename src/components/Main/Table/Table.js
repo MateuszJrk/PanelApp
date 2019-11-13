@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import ReactTooltip from "react-tooltip";
+import moment from "moment";
+import { DateRangePicker } from "react-dates";
+
+import "react-dates/lib/css/_datepicker.css";
 import {
   fetchData,
   sortData,
@@ -90,6 +94,7 @@ const ButtonTable = styled.button`
 const P = styled.p`
   margin: 0px;
 `;
+
 // const ImgTable = styled.img`
 //   width: 90px;
 //   height: 60px;
@@ -102,7 +107,9 @@ const P = styled.p`
 class PaginationTable extends Component {
   state = {
     pageOfItems: [],
-    pageSize: { value: 10 }
+    pageSize: { value: 10 },
+    startDate: moment().startOf("month"),
+    endDate: moment().endOf("month")
   };
 
   componentDidMount() {
@@ -117,12 +124,29 @@ class PaginationTable extends Component {
   handleSelect = e => {
     this.setState({ pageSize: { value: e.target.value } });
   };
+  // onDatesChange = startDate => {
+  //   this.setState(() => ({ startDate }));
+  // };
 
   render() {
     return (
       <TableDiv>
         <Row>
           <Calendar />
+
+          <DateRangePicker
+            startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+            endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+            onDatesChange={({ startDate, endDate }) =>
+              this.setState({ startDate, endDate })
+            } // PropTypes.func.isRequired,
+            focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+            numberOfMonths={1}
+            isOutsideRange={() => false}
+            showClearDates={true}
+          />
+
           <Filters />
         </Row>
 
@@ -432,7 +456,6 @@ class PaginationTable extends Component {
   }
 }
 
-export default connect(
-  null,
-  { fetchData, sortData, deleteData, onChange }
-)(PaginationTable);
+export default connect(null, { fetchData, sortData, deleteData, onChange })(
+  PaginationTable
+);

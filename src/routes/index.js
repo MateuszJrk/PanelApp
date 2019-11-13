@@ -9,16 +9,9 @@ import { Folder, Home } from "react-feather";
 // Routes
 
 const dashboardRoutes = {
-  path: "/pages",
+  path: "/main",
   name: "Dashboard",
-  icon: Folder,
-
-  children: [
-    {
-      path: "/pages/profile",
-      name: "Test"
-    }
-  ]
+  icon: Folder
 };
 
 const pageRoutes = {
@@ -31,16 +24,6 @@ const pageRoutes = {
       name: "Test"
     }
   ]
-};
-
-const LoginRoute = {
-  path: "/",
-  name: "Panel"
-};
-
-const PrivateRoute = {
-  path: "/main",
-  name: "Main"
 };
 
 // const layoutRoutes = {
@@ -82,12 +65,7 @@ const PrivateRoute = {
 // };
 
 // Dashboard specific routes
-export const dashboard = [
-  dashboardRoutes,
-  pageRoutes,
-  LoginRoute,
-  PrivateRoute
-];
+export const dashboard = [dashboardRoutes, pageRoutes];
 
 // Landing specific routes
 

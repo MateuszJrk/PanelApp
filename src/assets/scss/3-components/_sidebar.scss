@@ -30,7 +30,7 @@
 }
 
 .sidebar-nav {
-  padding-bottom: $spacer*3.5;
+  padding-bottom: $spacer * 3.5;
   padding-left: 0;
   list-style: none;
 }
@@ -43,13 +43,13 @@ a.sidebar-link {
   color: $sidebar-link-color;
   font-weight: $sidebar-link-font-weight;
   background: $sidebar-link-bg;
-  transition: background .1s ease-in-out;
+  transition: background 0.1s ease-in-out;
   position: relative;
   text-decoration: none;
   cursor: pointer;
 
   svg {
-    margin-right: .75rem;
+    margin-right: 0.75rem;
     color: $sidebar-link-icon-color;
   }
 }
@@ -67,15 +67,15 @@ a.sidebar-link {
   }
 }
 
-.sidebar-item.active > .sidebar-link,
-.sidebar-item.active .sidebar-link:hover {
-  color: $sidebar-link-active-color;
-  background: $sidebar-link-active-bg;
+// .sidebar-item.active > .sidebar-link,
+// .sidebar-item.active .sidebar-link:hover {
+//   color: $sidebar-link-active-color;
+//   background: $sidebar-link-active-bg;
 
-  svg {
-    color: $sidebar-link-icon-active-color;
-  }
-}
+//   svg {
+//     color: $sidebar-link-icon-active-color;
+//   }
+// }
 
 // Children
 .sidebar-dropdown .sidebar-link {
@@ -105,14 +105,14 @@ a.sidebar-link {
 .sidebar [data-toggle="collapse"]:before {
   content: " ";
   border: solid;
-  border-width: 0 .1rem .1rem 0;
+  border-width: 0 0.1rem 0.1rem 0;
   display: inline-block;
   padding: 2px;
   transform: rotate(45deg);
   position: absolute;
   top: 1.2rem;
   right: 1.25rem;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .sidebar [aria-expanded="true"]:before,
@@ -167,7 +167,6 @@ a.sidebar-link {
   // Workaround for IE bug, more info:
   // https://stackoverflow.com/a/25850649
   @media (min-width: 1px) and (max-width: #{map-get($grid-breakpoints, 'lg') - .02px}) {
-
     // Sidebar default state (on mobile)
     margin-left: -$sidebar-width;
 
