@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import ReactTooltip from "react-tooltip";
-import moment from "moment";
-import { DateRangePicker } from "react-dates";
 
 import "react-dates/lib/css/_datepicker.css";
 import {
@@ -43,7 +41,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Pagination from "../Pagination/Pagination";
-import Calendar from "./Calendar";
+import Calendar from "./Calendar/Calendar";
 import Filters from "./Filters";
 import Dropdown from "./Dropdown";
 import styled from "styled-components";
@@ -107,9 +105,7 @@ const P = styled.p`
 class PaginationTable extends Component {
   state = {
     pageOfItems: [],
-    pageSize: { value: 10 },
-    startDate: moment().startOf("month"),
-    endDate: moment().endOf("month")
+    pageSize: { value: 10 }
   };
 
   componentDidMount() {
@@ -133,19 +129,6 @@ class PaginationTable extends Component {
       <TableDiv>
         <Row>
           <Calendar />
-
-          <DateRangePicker
-            startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-            endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-            onDatesChange={({ startDate, endDate }) =>
-              this.setState({ startDate, endDate })
-            } // PropTypes.func.isRequired,
-            focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-            numberOfMonths={1}
-            isOutsideRange={() => false}
-            showClearDates={true}
-          />
 
           <Filters />
         </Row>
