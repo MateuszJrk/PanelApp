@@ -1,11 +1,14 @@
 import * as types from "../constants";
 import _ from "lodash";
+import moment from "moment";
 
 const initialState = {
   data: [],
   text: "",
   sortColumn: { path: "title", order: "asc" },
-  isChecked: []
+  isChecked: [],
+  startDate: moment().startOf("month"),
+  endDate: moment().endOf("month")
 };
 
 export default function(state = initialState, action) {
@@ -71,6 +74,16 @@ export default function(state = initialState, action) {
         data: action.payload.filter(el => {
           return filteredArray.includes(el.modification_timestamp);
         })
+      };
+    case "SET_START_DATE":
+      return {
+        ...state,
+        startDate: action.startDate
+      };
+    case "SET_END_DATE":
+      return {
+        ...state,
+        endDate: action.endDate
       };
 
     default:

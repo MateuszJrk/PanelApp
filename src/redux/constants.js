@@ -22,3 +22,5 @@ export const SEARCH_DATA = "SEARCH_DATA";
 export const SORT_DATA = "SORT_DATA";
 export const DELETE_DATA = "DELETE_DATA";
 export const ON_CHANGE = "ON_CHANGE";
+export const SET_START_DATE = "SET_START_DATE";
+export const SET_END_DATE = "SET_END_DATE";
